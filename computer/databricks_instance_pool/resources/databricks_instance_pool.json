@@ -1,5 +1,5 @@
 {
-    "instance_pool_name":"auto_loader_datalake_hml_driver",
+    "instance_pool_name":"auto_loader_datalake_hml_drive",
     "min_idle_instances":1,
     "max_capacity":2,
     "aws_attributes":{

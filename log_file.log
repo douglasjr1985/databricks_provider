@@ -1,0 +1,10 @@
+2023-11-08 14:56:17,501 - root - INFO - Processing job: None
+2023-11-08 14:56:17,501 - root - ERROR - File not found.
+2023-11-08 14:56:17,501 - root - ERROR - Unable to create or update the job due to previous errors.
+2023-11-08 14:56:22,151 - root - INFO - Processing job: None
+2023-11-08 14:56:22,151 - root - ERROR - File not found.
+2023-11-08 14:56:22,151 - root - ERROR - Unable to create or update the job due to previous errors.
+2023-11-08 15:01:00,301 - root - INFO - Processing job: job_teste
+2023-11-08 15:01:01,444 - root - INFO - JOB_ID 383314281398491 has been updated
+2023-11-08 15:04:20,657 - root - INFO - Processing job: job_teste
+2023-11-08 15:04:21,794 - root - INFO - JOB_ID 383314281398491 has been updated
