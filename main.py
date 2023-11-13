@@ -2,32 +2,9 @@ import argparse
 import logging
 import json
 
-from toolkit.get_config import _get_job_config
-from computer.databricks_instance_pool.instance_pool import DatabricksInstancePoolManager 
-
-computer/databricks_cluster/resource/databricks_cluster.json
-
-def _get_job_config(path_config):
-    try:
-        with open(f'{path_config}', 'r') as config_file:
-            job_config = json.load(config_file)
-        return job_config
-    except FileNotFoundError:
-        logging.error("File not found.")
-    except (IOError, Exception) as e:
-        logging.error(f"An unexpected error occurred: {e}")
-    return None
-
-def find_databricks_instance_pool(text):
-    parts = text.split('/')
-
-    # Procurando pelo segmento desejado
-    for part in parts:
-        if "databricks_instance_pool" in part:
-            return part
-    return None
-
-
+from toolkit.get_config import Config
+from toolkit.instance_pool import DatabricksInstancePoolManager
+ 
 def main():
     # Logging configuration
     logging.basicConfig(filename='log_file.log', level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -43,16 +20,16 @@ def main():
 
     workspace_url = args.workspace_url
     client_secret = args.client_secret
-    path_config = args.filename  
+    path_config = args.path_config  
+  
+    path = Config(path_config)
+    config = path.get_config()
 
+    if path.find_databricks() == 'databricks_instance_pool':
+        insta = DatabricksInstancePoolManager(workspace_url=workspace_url, client_secret=client_secret, path_config=config )
+        insta.create_or_edit_instance_pool(pool_name=, pool_config=path_config)
 
-    #path_config = _get_job_config(path_config)
-
-    if path_config:
-        job_manager = DatabricksInstancePoolManager(workspace_url, client_secret)
-        job_manager.create_or_replace_job(job_name, path_config)
-    else:
-        logging.error('Unable to create or update the job due to previous errors.')
+ 
 
 
 if __name__ == '__main__':
