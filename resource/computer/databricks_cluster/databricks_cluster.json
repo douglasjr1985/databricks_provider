@@ -1,5 +1,5 @@
 {
-    "instance_pool_name":"databricks_cluster",
+    "instance_pool_name":"databricks_cluste",
     "min_idle_instances":1,
     "max_capacity":2,
     "aws_attributes":{
