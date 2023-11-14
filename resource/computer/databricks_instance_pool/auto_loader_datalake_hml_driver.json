@@ -1,7 +1,7 @@
 {
-   "instance_pool_name":"databricks_cluster",
+   "instance_pool_name":"auto_loader_datalake_hml_driver",
    "min_idle_instances":1,
-   "max_capacity":365,
+   "max_capacity":500,
    "aws_attributes":{
       "availability":"ON_DEMAND",
       "zone_id":"us-east-1a",
