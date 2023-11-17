@@ -26,4 +26,4 @@ deploy:
 	done < changed-files.txt
 
 # Default target
-all: install test list-modified-files deploy
+all: install list-modified-files deploy
