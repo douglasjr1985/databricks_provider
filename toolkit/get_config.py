@@ -42,6 +42,6 @@ class Config:
             parts = file_path_without_extension.split('/')
             config = self.load_config(self.path_config)
             if parts and len(parts) > 3 and parts[2] == 'databricks_instance_pool':
-                job_manager = DatabricksInstancePoolManager(self.workspace_url, self.client_secret)
+                job_manager = DatabricksInstancePoolManager(self.workspace_url, self.client_secret, self.path_config)
                 job_manager.create_or_edit_instance_pool(parts[3], config)
  

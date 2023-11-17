@@ -1,0 +1,30 @@
+{
+  "instance_pool_name": "auto_loader_batch_driver_redhorn_",
+  "min_idle_instances": 0,
+  "aws_attributes": {
+    "availability": "ON_DEMAND",
+    "zone_id": "us-east-1a",
+    "spot_bid_price_percent": 100
+  },
+  "node_type_id": "c6g.2xlarge",
+  "idle_instance_autotermination_minutes": 5,
+  "enable_elastic_disk": true,
+  "preloaded_spark_versions": [
+    "10.5.x-scala2.12"
+  ],
+  "instance_pool_id": "0930-170736-brute8-pool-np3cbnlg",
+  "default_tags": {
+    "Vendor": "Databricks",
+    "DatabricksInstancePoolCreatorId": "8334682456605472",
+    "DatabricksInstancePoolId": "0930-170736-brute8-pool-np3cbnlg",
+    "DatabricksInstanceGroupId": "-5975810218887196479"
+  },
+  "state": "ACTIVE",
+  "stats": {
+    "used_count": 0,
+    "idle_count": 0,
+    "pending_used_count": 0,
+    "pending_idle_count": 0
+  },
+  "status": {}
+}

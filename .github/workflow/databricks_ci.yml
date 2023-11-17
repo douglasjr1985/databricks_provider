@@ -1,0 +1,46 @@
+name: Databricks CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  #  paths:
+  #    - 'resources/**'  # Only changes in the "resources" folder will trigger the workflow.
+  
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Clone the repository with full history
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.12.0
+
+    - name: Install Dependencies
+      run: make install
+      # Description: Install project dependencies by running the Makefile
+
+    - name: Run Tests
+      run: make test
+      # Description: Execute project tests using the Makefile
+
+    - name: List Modified Files
+      env:
+        GITHUB_HEAD_COMMIT_ID: ${{ github.event.head_commit.id }}
+        GITHUB_BEFORE_COMMIT: ${{ github.event.before }}    
+      run: make list-modified-files
+      # Description: List modified files in the repository using the Makefile
+
+    - name: Deploy
+      env:
+        DATALAKE_DATABRICKS_WORKSPACE_URL_PRD: ${{ vars.DATALAKE_DATABRICKS_WORKSPACE_URL_PRD }}
+        DATALAKE_DATABRICKS_CLIENT_SECRET: ${{ secrets.DATALAKE_DATABRICKS_CLIENT_SECRET }}        
+      run: make deploy
+      # Description: Execute the application deployment process using the Makefile
