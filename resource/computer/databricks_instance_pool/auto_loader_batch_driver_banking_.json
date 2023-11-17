@@ -12,19 +12,14 @@
   "preloaded_spark_versions": [
     "10.5.x-scala2.12"
   ],
-  "instance_pool_id": "0930-163402-rural5-pool-32565kw0",
+  "instance_pool_id": "1117-190113-melt467-pool-249z864w",
   "default_tags": {
     "Vendor": "Databricks",
-    "DatabricksInstancePoolCreatorId": "8334682456605472",
-    "DatabricksInstancePoolId": "0930-163402-rural5-pool-32565kw0",
-    "DatabricksInstanceGroupId": "-4799124430324501584"
+    "DatabricksInstancePoolCreatorId": "7446174290248091",
+    "DatabricksInstancePoolId": "1117-190113-melt467-pool-249z864w",
+    "DatabricksInstanceGroupId": "-7034383910961126699"
   },
   "state": "ACTIVE",
-  "stats": {
-    "used_count": 0,
-    "idle_count": 0,
-    "pending_used_count": 0,
-    "pending_idle_count": 0
-  },
+  "stats": {},
   "status": {}
 }
