@@ -1,9 +1,4 @@
-2023-11-16 23:14:21,300 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
-2023-11-16 23:14:22,483 - root - ERROR - HTTP request error in creating/editing instance pool 'auto_loader_streaming_worker_issuing2': 400 Client Error: Bad Request for url: https://dock-tech-hml.cloud.databricks.com/api/2.0/instance-pools/edit
- Response from server: 
- { 'error_code': 'INVALID_PARAMETER_VALUE',
-  'message': "'1117-0153060ztdc7l' is not a valid instance pool ID."}
-2023-11-16 23:14:22,724 - root - INFO - Updating JSON file: {
+{
   "instance_pool_name": "auto_loader_streaming_worker_issuing2",
   "min_idle_instances": 10,
   "aws_attributes": {
