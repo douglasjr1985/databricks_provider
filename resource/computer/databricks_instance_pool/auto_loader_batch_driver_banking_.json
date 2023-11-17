@@ -1,6 +1,6 @@
 {
   "instance_pool_name": "auto_loader_batch_driver_banking_",
-  "min_idle_instances": 1,
+  "min_idle_instances": 110,
   "aws_attributes": {
     "availability": "ON_DEMAND",
     "zone_id": "us-east-1a",
