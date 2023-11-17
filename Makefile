@@ -14,7 +14,7 @@ install:
 # List modified files
 list-modified-files:
 	if [ "$(GITHUB_HEAD_COMMIT_ID)" != "$(GITHUB_BEFORE_COMMIT)" ]; then \
-		git diff --name-status $(GITHUB_BEFORE_COMMIT) $(GITHUB_HEAD_COMMIT_ID) | awk -F/ '{print $$2}' | grep '\.json$$' | sed 's/\.json$$//' > changed-files.txt; \
+		git diff --name-status $(GITHUB_BEFORE_COMMIT) $(GITHUB_HEAD_COMMIT_ID) | awk '{print $$2}' > changed-files.txt; \
 	else \
 		echo "No changes in this push."; \
 	fi
