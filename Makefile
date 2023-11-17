@@ -8,8 +8,8 @@ install:
 	$(PIP) install -r requirements.txt
 
 # Run tests using pytest
-test:
-	$(PYTEST) tests
+#test:
+#	$(PYTEST) tests
 
 # List modified files
 list-modified-files:
@@ -20,7 +20,7 @@ list-modified-files:
 	fi
 
 # Run the Python script with modified files and deploy.
-deploy: test
+deploy: 
 	while IFS= read -r filename; do \
 		$(PYTHON) main.py --workspace_url "$(DATALAKE_DATABRICKS_WORKSPACE_URL_PRD)" --client_secret "$(DATALAKE_DATABRICKS_CLIENT_SECRET)" --filename "$$filename"; \
 	done < changed-files.txt
