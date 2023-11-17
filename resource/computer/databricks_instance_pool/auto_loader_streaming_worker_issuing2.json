@@ -1,6 +1,6 @@
 {
   "instance_pool_name": "auto_loader_streaming_worker_issuing2",
-  "min_idle_instances": 10,
+  "min_idle_instances": 1000,
   "aws_attributes": {
     "availability": "ON_DEMAND",
     "zone_id": "us-east-1a",
