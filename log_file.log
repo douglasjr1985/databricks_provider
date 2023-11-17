@@ -33,3 +33,65 @@
   },
   "status": {}
 }
+2023-11-16 23:17:44,257 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
+2023-11-16 23:17:45,444 - root - ERROR - HTTP request error in creating/editing instance pool 'auto_loader_streaming_worker_issuing2': 400 Client Error: Bad Request for url: https://dock-tech-hml.cloud.databricks.com/api/2.0/instance-pools/edit
+ Response from server: 
+ { 'error_code': 'INVALID_PARAMETER_VALUE',
+  'message': "'1117-015306-last430-pool-' is not a valid instance pool ID."}
+2023-11-16 23:17:45,880 - root - INFO - Updating JSON file: {
+  "instance_pool_name": "auto_loader_streaming_worker_issuing2",
+  "min_idle_instances": 10,
+  "aws_attributes": {
+    "availability": "ON_DEMAND",
+    "zone_id": "us-east-1a",
+    "spot_bid_price_percent": 100
+  },
+  "node_type_id": "c5d.9xlarge",
+  "idle_instance_autotermination_minutes": 1,
+  "enable_elastic_disk": true,
+  "preloaded_spark_versions": [
+    "10.5.x-scala2.12"
+  ],
+  "instance_pool_id": "1117-015306-last430-pool-p0ztdc7l",
+  "default_tags": {
+    "Vendor": "Databricks",
+    "DatabricksInstancePoolCreatorId": "7446174290248091",
+    "DatabricksInstancePoolId": "1117-015306-last430-pool-p0ztdc7l",
+    "DatabricksInstanceGroupId": "-6962793354652470301"
+  },
+  "state": "ACTIVE",
+  "stats": {
+    "used_count": 0,
+    "idle_count": 10,
+    "pending_used_count": 0,
+    "pending_idle_count": 0
+  },
+  "status": {}
+}
+2023-11-16 23:18:43,818 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing3.json
+2023-11-16 23:18:44,990 - root - INFO - Instance pool 'auto_loader_streaming_worker_issuing3' created successfully.
+2023-11-16 23:18:45,254 - root - INFO - Updating JSON file: {
+  "instance_pool_name": "auto_loader_streaming_worker_issuing3",
+  "min_idle_instances": 10,
+  "aws_attributes": {
+    "availability": "ON_DEMAND",
+    "zone_id": "us-east-1a",
+    "spot_bid_price_percent": 100
+  },
+  "node_type_id": "c5d.9xlarge",
+  "idle_instance_autotermination_minutes": 1,
+  "enable_elastic_disk": true,
+  "preloaded_spark_versions": [
+    "10.5.x-scala2.12"
+  ],
+  "instance_pool_id": "1117-021844-swarm467-pool-u8m9fxg0",
+  "default_tags": {
+    "Vendor": "Databricks",
+    "DatabricksInstancePoolCreatorId": "7446174290248091",
+    "DatabricksInstancePoolId": "1117-021844-swarm467-pool-u8m9fxg0",
+    "DatabricksInstanceGroupId": "-9211936054078844020"
+  },
+  "state": "ACTIVE",
+  "stats": {},
+  "status": {}
+}
