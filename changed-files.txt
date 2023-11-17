@@ -1,1 +1,1 @@
-D	computer/databricks_instance_pool/auto_loader_datalake_hml_driver.json
+D	computer/databricks_instance_pool/auto_loader_batch_driver_banking_.json
