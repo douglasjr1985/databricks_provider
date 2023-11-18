@@ -11,7 +11,7 @@
   "enable_elastic_disk": false,
   "instance_pool_id": "0316-222922-isms449-pool-058r979s",
   "default_tags": {
-    "Vendor": "Databricks",
+    "Vendor": "2",
     "DatabricksInstancePoolCreatorId": "8577112736979751",
     "DatabricksInstancePoolId": "0316-222922-isms449-pool-058r979s",
     "DatabricksInstanceGroupId": "-4768256259117013976"
