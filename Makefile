@@ -20,8 +20,8 @@ list-modified-files:
 	fi
 
 # # Run the Python script with modified files and deploy.
- deploy: 
- 	while IFS= read -r filename; do \
+deploy: 
+	while IFS= read -r filename; do \
  		if [ -n "$$filename" ]; then \
  		    echo "Deploying $$filename"; \
  			$(PYTHON) main.py --workspace_url "$(DATALAKE_DATABRICKS_WORKSPACE_URL_PRD)" --client_secret "$(DATALAKE_DATABRICKS_CLIENT_SECRET)" --path_config "$$filename"; \
@@ -30,3 +30,5 @@ list-modified-files:
 
 # Default target
 all: install list-modified-files deploy
+
+ 
