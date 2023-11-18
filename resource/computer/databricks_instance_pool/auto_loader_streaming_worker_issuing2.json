@@ -14,7 +14,7 @@
   ],
   "instance_pool_id": "1117-015306-last430-pool-p0ztdc7l",
   "default_tags": {
-    "Vendor": "Databricks",
+    "Vendor": "Databrick",
     "DatabricksInstancePoolCreatorId": "7446174290248091",
     "DatabricksInstancePoolId": "1117-015306-last430-pool-p0ztdc7l",
     "DatabricksInstanceGroupId": "-6962793354652470301"

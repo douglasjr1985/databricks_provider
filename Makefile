@@ -14,16 +14,19 @@ install:
 # List modified files
 list-modified-files:
 	if [ "$(GITHUB_HEAD_COMMIT_ID)" != "$(GITHUB_BEFORE_COMMIT)" ]; then \
-		git diff --name-status $(GITHUB_BEFORE_COMMIT) $(GITHUB_HEAD_COMMIT_ID) | awk '{print $$2}' > changed-files.txt; \
+		git diff --name-status $(GITHUB_BEFORE_COMMIT) $(GITHUB_HEAD_COMMIT_ID) | awk '{sub(/.*resource/, "resource"); print}' | sed 's/\r$//' > changed-files.txt; \
 	else \
 		echo "No changes in this push."; \
 	fi
 
-# Run the Python script with modified files and deploy.
-deploy: 
-	while IFS= read -r filename; do \
-		$(PYTHON) main.py --workspace_url "$(DATALAKE_DATABRICKS_WORKSPACE_URL_PRD)" --client_secret "$(DATALAKE_DATABRICKS_CLIENT_SECRET)" --path_config "$$filename"; \
-	done < changed-files.txt
+# # Run the Python script with modified files and deploy.
+ deploy: 
+ 	while IFS= read -r filename; do \
+ 		if [ -n "$$filename" ]; then \
+ 		    echo "Deploying $$filename"; \
+ 			$(PYTHON) main.py --workspace_url "$(DATALAKE_DATABRICKS_WORKSPACE_URL_PRD)" --client_secret "$(DATALAKE_DATABRICKS_CLIENT_SECRET)" --path_config "$$filename"; \
+ 		fi; \
+ 	done < changed-files.txt
 
 # Default target
 all: install list-modified-files deploy
