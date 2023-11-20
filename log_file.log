@@ -49,3 +49,6 @@
 }
 2023-11-20 08:58:26,636 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
 2023-11-20 08:58:27,755 - root - INFO - Instance pool 'auto_loader_streaming_worker_issuing2' edited successfully.
+2023-11-20 09:06:04,412 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
+2023-11-20 09:06:36,758 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
+2023-11-20 09:06:37,869 - root - INFO - Instance pool 'auto_loader_streaming_worker_issuing2' edited successfully.
