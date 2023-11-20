@@ -1,6 +1,6 @@
 {
   "instance_pool_name": "auto_loader_streaming_worker_issuing2",
-  "min_idle_instances": 1000,
+  "min_idle_instances": 10,
   "aws_attributes": {
     "availability": "ON_DEMAND",
     "zone_id": "us-east-1a",
@@ -14,7 +14,7 @@
   ],
   "instance_pool_id": "1117-015306-last430-pool-p0ztdc7l",
   "default_tags": {
-    "Vendor": "1",
+    "Vendor": "Databricks",
     "DatabricksInstancePoolCreatorId": "7446174290248091",
     "DatabricksInstancePoolId": "1117-015306-last430-pool-p0ztdc7l",
     "DatabricksInstanceGroupId": "-6962793354652470301"

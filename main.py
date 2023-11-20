@@ -2,7 +2,7 @@ import argparse
 import logging
 import json
 
-from toolkit.get_config import Config
+from toolkit.resourcecontroller import Config
 
 def configure_logging():
     """Configures the logging settings."""
