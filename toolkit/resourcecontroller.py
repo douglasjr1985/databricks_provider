@@ -1,7 +1,7 @@
 import json
 import logging
 
-from toolkit.databricksmanager.instance_pool import  DatabricksInstancePoolManager
+from toolkit.databricksmanager.instancepool import  DatabricksInstancePoolManager
 from toolkit.databricksmanager.cluster import  DatabricksClusterManager
 
 
@@ -46,8 +46,13 @@ class Config:
 
         match parts:
             case [_, _, "databricks_instance_pool", pool_name, *_]:
-                job_manager = DatabricksInstancePoolManager(self.workspace_url, self.client_secret, self.path_config)
-                job_manager.create_or_edit_instance_pool(pool_name, config)
+                self.manage_databricks_resource(DatabricksInstancePoolManager, pool_name, config)
             case [_, _, "databricks_cluster", cluster_name, *_]:
-                cluster_manager = DatabricksClusterManager(self.workspace_url, self.client_secret, self.path_config)
-                cluster_manager.create_or_edit_cluster(cluster_name, config)
+                self.manage_databricks_resource(DatabricksClusterManager, cluster_name, config)
+
+    def manage_databricks_resource(self, manager_class, resource_name, config):
+        """
+        Manages a Databricks resource (instance pool or cluster).
+        """
+        manager = manager_class(self.workspace_url, self.client_secret, self.path_config)
+        manager.create_or_edit_resource(resource_name, config)
