@@ -1,8 +1,7 @@
 import json
 import logging
-from pathlib import Path
 
-from toolkit.databricksmanager.instancepool import  DatabricksInstancePoolManager
+from toolkit.databricksmanager.instance_pool import  DatabricksInstancePoolManager
 from toolkit.databricksmanager.cluster import  DatabricksClusterManager
 
 
@@ -13,15 +12,15 @@ class Config:
        self.client_secret = client_secret
        self.path_config = path_config
 
-    def _remove_json_extension(self, file_path: str):
-            """
-            Removes the .json extension from the file path.
-            """
-            if file_path.endswith('.json'):
-                return file_path[:-5]  # Removes '.json'
-            return None
+    def remove_json_extension(self, file_path: str):
+        """
+        Removes the .json extension from the file path.
+        """
+        if file_path.endswith('.json'):
+            return file_path[:-5]  # Removes '.json'
+        return None
 
-    def _load_config(self, file_path: str):
+    def load_config(self, file_path: str):
         """
         Loads the configuration from a JSON file.
         """
@@ -40,24 +39,15 @@ class Config:
         """
         Executes the configuration process and job execution.
         """
-        file_path_without_extension = self._remove_json_extension(self.path_config)
+        file_path_without_extension = self.remove_json_extension(self.path_config)
         parts = file_path_without_extension.split('/')
 
-        if len(parts) < 3:
-            logging.error("Invalid file path format.")
-            return        
-
-        config = self._load_config(self.path_config)
+        config = self.load_config(self.path_config)
 
         match parts:
             case [_, _, "databricks_instance_pool", pool_name, *_]:
-                self._manage_databricks_resource(DatabricksInstancePoolManager, pool_name, config)
+                job_manager = DatabricksInstancePoolManager(self.workspace_url, self.client_secret, self.path_config)
+                job_manager.create_or_edit_instance_pool(pool_name, config)
             case [_, _, "databricks_cluster", cluster_name, *_]:
-                self._manage_databricks_resource(DatabricksClusterManager, cluster_name, config)
-
-    def _manage_databricks_resource(self, manager_class, resource_name, config):
-        """
-        Manages a Databricks resource (instance pool, cluster).
-        """
-        manager = manager_class(self.workspace_url, self.client_secret, self.path_config)
-        manager.create_or_edit_resource(resource_name, config)
+                cluster_manager = DatabricksClusterManager(self.workspace_url, self.client_secret, self.path_config)
+                cluster_manager.create_or_edit_cluster(cluster_name, config)
