@@ -9,17 +9,17 @@
   "node_type_id": "c5d.4xlarge",
   "idle_instance_autotermination_minutes": 5,
   "enable_elastic_disk": false,
-  "instance_pool_id": "0316-222922-isms449-pool-058r979s",
+  "instance_pool_id": "1118-022651-soup459-pool-eshdk0r4",
   "default_tags": {
-    "Vendor": "teste bla bvla bla",
-    "DatabricksInstancePoolCreatorId": "8577112736979751",
-    "DatabricksInstancePoolId": "0316-222922-isms449-pool-058r979s",
-    "DatabricksInstanceGroupId": "-4768256259117013976"
+    "Vendor": "Databricks",
+    "DatabricksInstancePoolCreatorId": "7446174290248091",
+    "DatabricksInstancePoolId": "1118-022651-soup459-pool-eshdk0r4",
+    "DatabricksInstanceGroupId": "-4900626866290173175"
   },
   "state": "ACTIVE",
   "stats": {
     "used_count": 0,
-    "idle_count": 1,
+    "idle_count": 0,
     "pending_used_count": 0,
     "pending_idle_count": 0
   },
