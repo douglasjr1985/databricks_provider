@@ -1,6 +1,6 @@
 {
   "instance_pool_name": "auto_loader_batch_driver_banking_v2",
-  "min_idle_instances": 0,
+  "min_idle_instances": 1,
   "aws_attributes": {
     "availability": "SPOT",
     "zone_id": "us-east-1a",
