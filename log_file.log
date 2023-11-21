@@ -1,38 +1,5 @@
-2023-11-21 05:56:10,773 - root - INFO - Processing job: resource/computer/databricks_instance_pool/instace_pool.json
-2023-11-21 05:56:12,010 - root - INFO - Updating JSON file: {
-  "instance_pool_name": "instace_pool",
-  "min_idle_instances": 1,
-  "max_capacity": 10,
-  "aws_attributes": {
-    "availability": "ON_DEMAND",
-    "zone_id": "us-east-1a",
-    "spot_bid_price_percent": 100
-  },
-  "node_type_id": "i3.xlarge",
-  "custom_tags": {
-    "Department": "Data Science",
-    "Project": "Analysis"
-  },
-  "idle_instance_autotermination_minutes": 15,
-  "enable_elastic_disk": false,
-  "preloaded_spark_versions": [
-    "7.3.x-scala2.12"
-  ],
-  "instance_pool_id": "1121-084353-hulk493-pool-koy91j4g",
-  "default_tags": {
-    "Vendor": "Databricks",
-    "DatabricksInstancePoolCreatorId": "7446174290248091",
-    "DatabricksInstancePoolId": "1121-084353-hulk493-pool-koy91j4g",
-    "DatabricksInstanceGroupId": "-8118032674298767729"
-  },
-  "state": "ACTIVE",
-  "stats": {
-    "used_count": 0,
-    "idle_count": 0,
-    "pending_used_count": 0,
-    "pending_idle_count": 0
-  },
-  "status": {}
-}
-2023-11-21 11:36:19,219 - root - INFO - Processing job: resource/computer/databricks_instance_pool/instace_pool.json
-2023-11-21 11:36:20,576 - root - INFO - Instance pool 'instace_pool' created successfully.
+2023-11-21 15:17:49,144 - root - INFO - Processing job: resource/computer/databricks_cluster/Dock_General.json
+2023-11-21 15:17:50,231 - root - ERROR - HTTP error during cluster 'Dock_General': 400 Client Error: Bad Request for url: https://dock-tech-hml.cloud.databricks.com/api/2.0/clusters/edit
+ Response from server: 
+ { 'error_code': 'INVALID_PARAMETER_VALUE',
+  'message': 'Missing required field: cluster_id'}
