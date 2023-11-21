@@ -44,7 +44,7 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/databricks-workflows-script/databricks_workflow.git
+   https://github.com/dock-tech/databricks-provider-script.git
    cd databricks_workflow
    pip install -r requirements.txt
 
@@ -59,7 +59,7 @@ To use this Databricks workflow system, follow these steps:
 3. Run the deployment script:
 
    ```bash
-   python3 main.py --workspace_url dominio.databricks.com --client_secret token --filename job_name
+   python3 main.py --workspace_url dominio.databricks.com --client_secret token --file_path file_path_name
 
 ## Scripts and Configuration
 
@@ -67,7 +67,4 @@ To use this Databricks workflow system, follow these steps:
 - resources/: Folder containing job configuration JSON files.
 - requirements.txt: List of Python dependencies.
 - Makefile: Contains convenient commands for installation, testing, and deployment.   
-
-
-
-**This project is dedicated to Dock**
+ 

@@ -8,8 +8,8 @@ install:
 	$(PIP) install -r requirements.txt
 
 # Run tests using pytest
-#test:
-#	$(PYTEST) tests
+test:
+	$(PYTEST) tests
 
 # List modified files
 list-modified-files:
@@ -20,7 +20,7 @@ list-modified-files:
 	fi
 
 # # Run the Python script with modified files and deploy.
-deploy: 
+deploy: test
 	while IFS= read -r filename; do \
  		if [ -n "$$filename" ]; then \
  		    echo "Deploying $$filename"; \
@@ -29,6 +29,6 @@ deploy:
  	done < changed-files.txt
 
 # Default target
-all: install list-modified-files deploy
+all: install test list-modified-files deploy
 
  
