@@ -49,13 +49,20 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git config --local user.email "douglasjr1985@github.com"
+        git config --local user.email "GitHub@github.com"
         git config --local user.name "GitHub Action"
     
         # Configura o remote URL com o GITHUB_TOKEN
         git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@${{ github.server_url }}/${{ github.repository }}
     
-        git add resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
-        git commit -m "Update file" || exit 0
+        # Adiciona todas as mudanças na pasta 'resource'
+        git add resource/
+
+        # Verifica se há mudanças. Se sim, faz commit e push.
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+          exit 0
+        fi
+
+        git commit -m "Update resources"
         git push origin HEAD:${{ github.ref }}
-        
