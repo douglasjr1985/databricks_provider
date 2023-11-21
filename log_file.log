@@ -1,5 +1,0 @@
-2023-11-21 15:17:49,144 - root - INFO - Processing job: resource/computer/databricks_cluster/Dock_General.json
-2023-11-21 15:17:50,231 - root - ERROR - HTTP error during cluster 'Dock_General': 400 Client Error: Bad Request for url: https://dock-tech-hml.cloud.databricks.com/api/2.0/clusters/edit
- Response from server: 
- { 'error_code': 'INVALID_PARAMETER_VALUE',
-  'message': 'Missing required field: cluster_id'}
