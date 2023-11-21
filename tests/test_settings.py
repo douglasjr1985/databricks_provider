@@ -10,15 +10,15 @@ def test_remove_json_extension():
 
     # Test case where .json extension is present
     file_path_with_json = "example.json"
-    assert config.remove_json_extension(file_path_with_json) == "example"
+    assert config._remove_json_extension(file_path_with_json) == "example"
 
     # Test case where .json extension is not present
     file_path_without_json = "example.txt"
-    assert config.remove_json_extension(file_path_without_json) is None
+    assert config._remove_json_extension(file_path_without_json) is None
 
     # Test case with an empty string
     empty_file_path = ""
-    assert config.remove_json_extension(empty_file_path) is None
+    assert config._remove_json_extension(empty_file_path) is None
 
 def test_load_config_valid_json(tmp_path):
     config = Config("dummy_url", "dummy_secret", "dummy_path")
