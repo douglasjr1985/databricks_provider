@@ -8,7 +8,7 @@
    },
    "node_type_id":"c5d.9xlarge",
    "idle_instance_autotermination_minutes":1,
-   "enable_elastic_disk":true,
+   "enable_elastic_disk":True,
    "preloaded_spark_versions":[
       "10.5.x-scala2.12"
    ],
