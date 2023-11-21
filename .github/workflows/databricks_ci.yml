@@ -49,11 +49,11 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git config --local user.email "GitHub@github.com"
+        git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add resource/ 
         git commit -m "Update resources"
-        git push https://${{ secrets.GITHUB_TOKEN }}@github.com/douglasjr1985/databricks_provider.git
+        git push  
     
 
         # # Set up remote URL with GITHUB_TOKEN
