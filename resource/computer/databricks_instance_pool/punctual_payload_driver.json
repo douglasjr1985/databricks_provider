@@ -1,0 +1,23 @@
+{
+   "instance_pool_name": "punctual_payload_driver",
+   "min_idle_instances": 0,
+   "max_capacity": 2,
+   "aws_attributes": {
+     "availability": "ON_DEMAND",
+     "zone_id": "us-east-1b",
+     "spot_bid_price_percent": 100
+   },
+   "node_type_id": "c6g.8xlarge",
+   "idle_instance_autotermination_minutes": 5,
+   "enable_elastic_disk": true,
+   "preloaded_spark_versions": [
+     "10.5.x-scala2.12"
+   ],
+   "instance_pool_id": "0911-032043-muggy53-pool-7n8supe8",
+   "default_tags": {
+     "Vendor": "Databricks",
+     "DatabricksInstancePoolCreatorId": "8334682456605472",
+     "DatabricksInstancePoolId": "0911-032043-muggy53-pool-7n8supe8",
+     "DatabricksInstanceGroupId": "-6590731124564512850"
+   }
+ }
