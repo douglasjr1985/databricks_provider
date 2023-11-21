@@ -1,6 +1,6 @@
 {
    "instance_pool_name":"auto_loader_streaming_worker_issuing2",
-   "min_idle_instances":0,
+   "min_idle_instances":1,
    "aws_attributes":{
       "availability":"ON_DEMAND",
       "zone_id":"us-east-1a",
@@ -12,11 +12,11 @@
    "preloaded_spark_versions":[
       "10.5.x-scala2.12"
    ],
-   "instance_pool_id":"0615-012132-tries176-pool-tyzlrqq8",
+   "instance_pool_id":"1121-143743-stare539-pool-s0bxj8r4",
    "default_tags":{
       "Vendor":"Databricks",
       "DatabricksInstancePoolCreatorId":"5775317119473657",
-      "DatabricksInstancePoolId":"0615-012132-tries176-pool-tyzlrqq8",
+      "DatabricksInstancePoolId":"1121-143743-stare539-pool-s0bxj8r4",
       "DatabricksInstanceGroupId":"-4941366408444976917"
    }
 }
