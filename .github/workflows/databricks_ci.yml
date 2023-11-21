@@ -44,3 +44,18 @@ jobs:
         DATALAKE_DATABRICKS_CLIENT_SECRET: ${{ secrets.DATALAKE_DATABRICKS_CLIENT_SECRET }}        
       run: make deploy
       # Description: Execute the application deployment process using the Makefile
+
+    - name: Commit and push if there are changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config --local user.email "douglasjr1985@github.com"
+        git config --local user.name "GitHub Action"
+    
+        # Configura o remote URL com o GITHUB_TOKEN
+        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@${{ github.server_url }}/${{ github.repository }}
+    
+        git add resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
+        git commit -m "Update file" || exit 0
+        git push origin HEAD:${{ github.ref }}
+        
