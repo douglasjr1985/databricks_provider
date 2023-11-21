@@ -1,6 +1,6 @@
 {
     "autoscale": {
-        "min_workers": 2,
+        "min_workers": 1,
         "max_workers": 2
     },
     "cluster_name": "Dock_General",
