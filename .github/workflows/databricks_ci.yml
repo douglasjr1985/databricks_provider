@@ -51,14 +51,14 @@ jobs:
       run: |
         git config --local user.email "GitHub@github.com"
         git config --local user.name "GitHub Action"
-    
-        # Configura o remote URL com o GITHUB_TOKEN
+        
+        # Set up remote URL with GITHUB_TOKEN
         git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@${{ github.server_url }}/${{ github.repository }}
-    
-        # Adiciona todas as mudanças na pasta 'resource'
+
+        # Add all changes within the 'resource' directory
         git add resource/
 
-        # Verifica se há mudanças. Se sim, faz commit e push.
+        # Check if there are changes. If so, commit and push.
         if git diff --staged --quiet; then
           echo "No changes to commit"
           exit 0
