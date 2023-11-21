@@ -43,37 +43,3 @@ jobs:
         DATALAKE_DATABRICKS_WORKSPACE_URL_PRD: ${{ vars.DATALAKE_DATABRICKS_WORKSPACE_URL_PRD }}
         DATALAKE_DATABRICKS_CLIENT_SECRET: ${{ secrets.DATALAKE_DATABRICKS_CLIENT_SECRET }}        
       run: make deploy
-      # Description: Execute the application deployment process using the Makefile
-
-    - name: Commit and push if there are changes
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@${{ github.server_url }}/${{ github.repository }}
-        git add resource/ 
-        git commit -m "Update resources"
-        git push  
-    
-
-        # # Set up remote URL with GITHUB_TOKEN
-        # #git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@${{ github.server_url }}/${{ github.repository }}
-
-        # ## Correct the remote URL setup
-        # git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/douglasjr1985/databricks_provider
-
-
-        # # Add all changes within the 'resource' directory
-        # git add resource/
-
-        # # Check if there are changes. If so, commit and push.
-        # if git diff --staged --quiet; then
-        #   echo "No changes to commit"
-        #   exit 0
-        # fi
-
-        # git commit -m "Update resources"
-        # git push origin HEAD:${{ github.ref }}
-
- 
