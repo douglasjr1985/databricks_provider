@@ -13,11 +13,11 @@
    "preloaded_spark_versions": [
      "10.5.x-scala2.12"
    ],
-   "instance_pool_id": "0911-032043-muggy53-pool-7n8supe8",
+   "instance_pool_id": "1121-150025-pawls8-pool-88qsz2mo",
    "default_tags": {
      "Vendor": "Databricks",
      "DatabricksInstancePoolCreatorId": "8334682456605472",
-     "DatabricksInstancePoolId": "0911-032043-muggy53-pool-7n8supe8",
+     "DatabricksInstancePoolId": "1121-150025-pawls8-pool-88qsz2mo8",
      "DatabricksInstanceGroupId": "-6590731124564512850"
    }
  }
