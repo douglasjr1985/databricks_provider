@@ -51,9 +51,13 @@ jobs:
       run: |
         git config --local user.email "GitHub@github.com"
         git config --local user.name "GitHub Action"
-        
+
         # Set up remote URL with GITHUB_TOKEN
-        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@${{ github.server_url }}/${{ github.repository }}
+        #git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@${{ github.server_url }}/${{ github.repository }}
+
+        ## Correct the remote URL setup
+        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/douglasjr1985/databricks_provider
+
 
         # Add all changes within the 'resource' directory
         git add resource/
