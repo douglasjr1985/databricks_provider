@@ -1,6 +1,6 @@
 {
   "instance_pool_name": "instace_pool",
-  "min_idle_instances": 10,
+  "min_idle_instances": 1,
   "max_capacity": 10,
   "idle_instance_autotermination_minutes": 15,
   "node_type_id": "i3.xlarge",
