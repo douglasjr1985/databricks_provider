@@ -4,7 +4,7 @@
   "aws_attributes": {
     "availability": "ON_DEMAND",
     "zone_id": "us-east-1a",
-    "spot_bid_price_percent": 100
+    "spot_bid_price_percent": 200
   },
   "node_type_id": "c5d.9xlarge",
   "idle_instance_autotermination_minutes": 1,
