@@ -55,7 +55,7 @@ jobs:
         # Set up remote URL with GITHUB_TOKEN
         #git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@${{ github.server_url }}/${{ github.repository }}
 
-        # Correct the remote URL setup
+        ## Correct the remote URL setup
         git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/douglasjr1985/databricks_provider
 
 
