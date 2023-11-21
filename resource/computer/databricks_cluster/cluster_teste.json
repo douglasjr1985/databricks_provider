@@ -23,7 +23,7 @@
     "spark_env_vars": {
         "PYSPARK_PYTHON": "/databricks/python3/bin/python3"
     },
-    "autotermination_minutes": 120,
+    "autotermination_minutes": 15,
     "enable_elastic_disk": false,
     "init_scripts": [],
     "enable_local_disk_encryption": false,
