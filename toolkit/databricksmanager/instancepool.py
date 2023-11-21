@@ -50,13 +50,7 @@ class DatabricksInstancePoolManager:
             else:
                 # Create a new pool if it doesn't exist
                 self.instance_pools_api.create_instance_pool(pool_config)
-                logging.info(f"Instance pool '{pool_name}' created successfully.")
-        except Exception as e:
-            # Assuming 'e' is an exception object that has a 'response' attribute
-            # and you can access the JSON response via e.response.json()
-            error_message = e.response.json().get('message')
-            if error_message == "'' is not a valid instance pool ID.":
-               self._update_file_json(pool_name)             
+                logging.info(f"Instance pool '{pool_name}' created successfully.")        
         except HTTPError as e:
             logging.error(f"HTTP error during instance pool '{pool_name}': {e}")
         except RequestException as req_error:
