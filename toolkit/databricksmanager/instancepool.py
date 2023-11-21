@@ -36,27 +36,6 @@ class DatabricksInstancePoolManager:
             logging.error(f"Error occurred: {e}")
         return None
 
-    def _update_file_json(self, pool_name: str):
-        """
-        Update a JSON file with the configuration of the specified instance pool.
-        Private method used for updating the configuration in a JSON file.
-        """
-        try:
-            pools_response = self.instance_pools_api.list_instance_pools()
-            pools_list = pools_response.get('instance_pools', [])
-
-            for pool in pools_list:
-                if pool.get('instance_pool_name') == pool_name:
-                    packaged_data = json.dumps(pool, indent=2)
-                    # Write the JSON string to a file
-                    with open(self.path_config, 'w') as file:
-                        file.write(packaged_data)
-                    logging.info(f"Updating JSON file: {packaged_data}")
-                    break  # Exit the loop once we find the corresponding pool
-        except Exception as e:
-            logging.error(f"Error updating JSON file: {e}")
-
-
     def create_or_edit_resource(self, pool_name: str, pool_config: dict):
         """
         Create or edit an instance pool based on the provided name and configuration.
@@ -72,14 +51,6 @@ class DatabricksInstancePoolManager:
                 # Create a new pool if it doesn't exist
                 self.instance_pools_api.create_instance_pool(pool_config)
                 logging.info(f"Instance pool '{pool_name}' created successfully.")
-                # Update the new pool to get the instance_pool_id
-                self._update_file_json(pool_name)
-        except Exception as e:
-            # Assuming 'e' is an exception object that has a 'response' attribute
-            # and you can access the JSON response via e.response.json()
-            error_message = e.response.json().get('message')
-            if error_message == "'' is not a valid instance pool ID.":
-               self._update_file_json(pool_name)             
         except HTTPError as e:
             logging.error(f"HTTP error during instance pool '{pool_name}': {e}")
         except RequestException as req_error:
