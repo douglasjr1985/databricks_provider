@@ -51,22 +51,27 @@ jobs:
       run: |
         git config --local user.email "GitHub@github.com"
         git config --local user.name "GitHub Action"
-
-        # Set up remote URL with GITHUB_TOKEN
-        #git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@${{ github.server_url }}/${{ github.repository }}
-
-        ## Correct the remote URL setup
-        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/douglasjr1985/databricks_provider
-
-
-        # Add all changes within the 'resource' directory
-        git add resource/
-
-        # Check if there are changes. If so, commit and push.
-        if git diff --staged --quiet; then
-          echo "No changes to commit"
-          exit 0
-        fi
-
         git commit -m "Update resources"
-        git push origin HEAD:${{ github.ref }}
+        git push https://${{ secrets.GITHUB_TOKEN }}@github.com/douglasjr1985/databricks_provider
+    
+
+        # # Set up remote URL with GITHUB_TOKEN
+        # #git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@${{ github.server_url }}/${{ github.repository }}
+
+        # ## Correct the remote URL setup
+        # git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/douglasjr1985/databricks_provider
+
+
+        # # Add all changes within the 'resource' directory
+        # git add resource/
+
+        # # Check if there are changes. If so, commit and push.
+        # if git diff --staged --quiet; then
+        #   echo "No changes to commit"
+        #   exit 0
+        # fi
+
+        # git commit -m "Update resources"
+        # git push origin HEAD:${{ github.ref }}
+
+ 
