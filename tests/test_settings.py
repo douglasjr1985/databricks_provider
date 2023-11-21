@@ -27,7 +27,7 @@ def test_load_config_valid_json(tmp_path):
     file.write_text(json.dumps({"key": "value"}))
 
     # Test loading valid JSON
-    assert config.load_config(str(file)) == {"key": "value"}
+    assert config._load_config(str(file)) == {"key": "value"}
 
 def test_load_config_file_not_found(caplog):
     config = Config("dummy_url", "dummy_secret", "dummy_path")
@@ -35,7 +35,7 @@ def test_load_config_file_not_found(caplog):
 
     # Test loading a non-existent file
     with caplog.at_level(logging.ERROR):
-        assert config.load_config(non_existent_file) is None
+        assert config._load_config(non_existent_file) is None
     assert "File not found: " + non_existent_file in caplog.text
 
 def test_load_config_invalid_json(tmp_path, caplog):
@@ -46,5 +46,5 @@ def test_load_config_invalid_json(tmp_path, caplog):
 
     # Test loading invalid JSON
     with caplog.at_level(logging.ERROR):
-        assert config.load_config(str(file)) is None
+        assert config._load_config(str(file)) is None
     assert "JSON decoding error:" in caplog.text    
