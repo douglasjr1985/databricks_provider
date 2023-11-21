@@ -12,7 +12,7 @@ class Config:
        self.client_secret = client_secret
        self.path_config = path_config
 
-    def remove_json_extension(self, file_path: str):
+    def _remove_json_extension(self, file_path: str):
         """
         Removes the .json extension from the file path.
         """
@@ -20,7 +20,7 @@ class Config:
             return file_path[:-5]  # Removes '.json'
         return None
 
-    def load_config(self, file_path: str):
+    def _load_config(self, file_path: str):
         """
         Loads the configuration from a JSON file.
         """
@@ -39,10 +39,10 @@ class Config:
         """
         Executes the configuration process and job execution.
         """
-        file_path_without_extension = self.remove_json_extension(self.path_config)
+        file_path_without_extension = self._remove_json_extension(self.path_config)
         parts = file_path_without_extension.split('/')
 
-        config = self.load_config(self.path_config)
+        config = self._load_config(self.path_config)
 
         match parts:
             case [_, _, "databricks_instance_pool", pool_name, *_]:
