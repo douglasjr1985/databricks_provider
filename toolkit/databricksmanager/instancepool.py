@@ -10,7 +10,6 @@ class DatabricksInstancePoolManager:
     Manages instance pool operations in Databricks, including listing, creating,
     and editing instance pools.
     """
-
     def __init__(self, workspace_url, client_secret, path_config):
         """
         Initialize the DatabricksInstancePoolManager with the Databricks workspace URL,
