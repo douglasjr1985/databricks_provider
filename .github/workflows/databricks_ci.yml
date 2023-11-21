@@ -54,6 +54,7 @@ jobs:
     
         # Configura o remote URL com o GITHUB_TOKEN
         git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@${{ github.server_url }}/${{ github.repository }}
+
     
         # Adiciona todas as mudanças na pasta 'resource'
         git add resource/
