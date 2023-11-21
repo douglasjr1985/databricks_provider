@@ -4,11 +4,13 @@ This repository contains a Databricks workflow management system. It allows you 
 
 ## Project structure
 
-    databricks-workflows-script/
+    databricks-provider-script/
     |-- toolkit/
     | |-- init.py
-    | |-- databricks_job/
-    | | -- job_manager.py
+    | |-- resourcecontroller.py
+    | |-- databricksmanager/
+    | | -- cluster.py
+    | | -- instancepool.py    
     | | -- init.py
     |-- tests/
     | |-- init.py
