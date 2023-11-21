@@ -1,7 +1,7 @@
 import logging
 import json
-import requests.exceptions
 
+from requests.exceptions import HTTPError, RequestException
 from databricks_cli.sdk.api_client import ApiClient
 from databricks_cli.instance_pools.api import InstancePoolsApi
 
@@ -75,9 +75,10 @@ class DatabricksInstancePoolManager:
                 logging.info(f"Instance pool '{pool_name}' created successfully.")
                 # Update the new pool to get the instance_pool_id
                 self._update_file_json(pool_name)
-        except requests.exceptions.RequestException as req_error:
+        except HTTPError as e:
+            logging.error(f"HTTP error during instance pool '{pool_name}': {e}")
+        except RequestException as req_error:
             logging.error(f"HTTP request error in creating/editing instance pool '{pool_name}': {req_error}")
-            self._update_file_json(pool_name)
         except (IOError, OSError) as file_error:
             logging.error(f"File IO error in creating/editing instance pool '{pool_name}': {file_error}")
         except Exception as general_error:
