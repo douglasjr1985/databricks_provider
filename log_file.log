@@ -1,54 +1,36 @@
-2023-11-20 08:51:33,103 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
-2023-11-20 08:52:06,222 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
-2023-11-20 08:53:10,437 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
-2023-11-20 08:53:21,456 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
-2023-11-20 08:53:21,456 - root - ERROR - An unexpected error occurred: 'str' object has no attribute 'open'
-2023-11-20 08:53:29,595 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
-2023-11-20 08:53:29,595 - root - ERROR - An unexpected error occurred: 'str' object has no attribute 'open'
-2023-11-20 08:54:35,410 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
-2023-11-20 08:55:00,395 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
-2023-11-20 08:55:13,852 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
-2023-11-20 08:57:31,216 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
-2023-11-20 08:57:32,275 - root - ERROR - HTTP request error in creating/editing instance pool 'auto_loader_streaming_worker_issuing2': 400 Client Error: Bad Request for url: https://dock-tech-hml.cloud.databricks.com/api/2.0/instance-pools/edit
- Response from server: 
- { 'details': [ { '@type': 'type.googleapis.com/google.rpc.ErrorInfo',
-                 'domain': '',
-                 'reason': 'CM_API_ERROR_SOURCE_CALLER_ERROR'}],
-  'error_code': 'INVALID_PARAMETER_VALUE',
-  'message': "The field 'min_idle_instances' must be less than or equal to "
-             '499. 1000 supplied.'}
-2023-11-20 08:57:32,575 - root - INFO - Updating JSON file: {
-  "instance_pool_name": "auto_loader_streaming_worker_issuing2",
-  "min_idle_instances": 10,
+2023-11-21 05:56:10,773 - root - INFO - Processing job: resource/computer/databricks_instance_pool/instace_pool.json
+2023-11-21 05:56:12,010 - root - INFO - Updating JSON file: {
+  "instance_pool_name": "instace_pool",
+  "min_idle_instances": 1,
+  "max_capacity": 10,
   "aws_attributes": {
     "availability": "ON_DEMAND",
     "zone_id": "us-east-1a",
     "spot_bid_price_percent": 100
   },
-  "node_type_id": "c5d.9xlarge",
-  "idle_instance_autotermination_minutes": 1,
-  "enable_elastic_disk": true,
+  "node_type_id": "i3.xlarge",
+  "custom_tags": {
+    "Department": "Data Science",
+    "Project": "Analysis"
+  },
+  "idle_instance_autotermination_minutes": 15,
+  "enable_elastic_disk": false,
   "preloaded_spark_versions": [
-    "10.5.x-scala2.12"
+    "7.3.x-scala2.12"
   ],
-  "instance_pool_id": "1117-015306-last430-pool-p0ztdc7l",
+  "instance_pool_id": "1121-084353-hulk493-pool-koy91j4g",
   "default_tags": {
     "Vendor": "Databricks",
     "DatabricksInstancePoolCreatorId": "7446174290248091",
-    "DatabricksInstancePoolId": "1117-015306-last430-pool-p0ztdc7l",
-    "DatabricksInstanceGroupId": "-6962793354652470301"
+    "DatabricksInstancePoolId": "1121-084353-hulk493-pool-koy91j4g",
+    "DatabricksInstanceGroupId": "-8118032674298767729"
   },
   "state": "ACTIVE",
   "stats": {
     "used_count": 0,
-    "idle_count": 10,
+    "idle_count": 0,
     "pending_used_count": 0,
     "pending_idle_count": 0
   },
   "status": {}
 }
-2023-11-20 08:58:26,636 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
-2023-11-20 08:58:27,755 - root - INFO - Instance pool 'auto_loader_streaming_worker_issuing2' edited successfully.
-2023-11-20 09:06:04,412 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
-2023-11-20 09:06:36,758 - root - INFO - Processing job: resource/computer/databricks_instance_pool/auto_loader_streaming_worker_issuing2.json
-2023-11-20 09:06:37,869 - root - INFO - Instance pool 'auto_loader_streaming_worker_issuing2' edited successfully.

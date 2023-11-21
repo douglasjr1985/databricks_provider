@@ -2,20 +2,34 @@
   "instance_pool_name": "instace_pool",
   "min_idle_instances": 1,
   "max_capacity": 10,
-  "idle_instance_autotermination_minutes": 15,
-  "node_type_id": "i3.xlarge",
-  "preloaded_spark_versions": ["7.3.x-scala2.12"],
   "aws_attributes": {
-      "availability": "ON_DEMAND",
-      "zone_id": "auto",
-      "first_on_demand": 1,
-      "spot_bid_price_percent": 100,
-      "ebs_volume_type": "GENERAL_PURPOSE_SSD",
-      "ebs_volume_count": 1,
-      "ebs_volume_size": 100
+    "availability": "ON_DEMAND",
+    "zone_id": "us-east-1a",
+    "spot_bid_price_percent": 100
   },
+  "node_type_id": "i3.xlarge",
   "custom_tags": {
-      "Department": "Data Science",
-      "Project": "Analysis"
-  }
+    "Department": "Data Science",
+    "Project": "Analysis"
+  },
+  "idle_instance_autotermination_minutes": 15,
+  "enable_elastic_disk": false,
+  "preloaded_spark_versions": [
+    "7.3.x-scala2.12"
+  ],
+  "instance_pool_id": "1121-084353-hulk493-pool-koy91j4g",
+  "default_tags": {
+    "Vendor": "Databricks",
+    "DatabricksInstancePoolCreatorId": "7446174290248091",
+    "DatabricksInstancePoolId": "1121-084353-hulk493-pool-koy91j4g",
+    "DatabricksInstanceGroupId": "-8118032674298767729"
+  },
+  "state": "ACTIVE",
+  "stats": {
+    "used_count": 0,
+    "idle_count": 0,
+    "pending_used_count": 0,
+    "pending_idle_count": 0
+  },
+  "status": {}
 }
