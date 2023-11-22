@@ -64,3 +64,4 @@ class DatabricksInstancePoolManager:
         except Exception as general_error:
             logging.error(f"General error in creating/editing instance pool '{pool_name}': {general_error}")
             raise
+        
