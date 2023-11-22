@@ -29,10 +29,13 @@ class Config:
                 return json.load(config_file)
         except FileNotFoundError:
             logging.error("File not found: " + file_path)
+            raise
         except json.JSONDecodeError as e:
             logging.error("JSON decoding error: " + str(e))
+            raise
         except Exception as e:
             logging.error("An unexpected error occurred: " + str(e))
+            raise
         return None
     
     def execute(self):
