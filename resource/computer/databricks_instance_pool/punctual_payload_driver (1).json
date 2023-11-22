@@ -19,13 +19,5 @@
     "DatabricksInstancePoolCreatorId": "8334682456605472",
     "DatabricksInstancePoolId": "0911-032043-muggy53-pool-7n8supe8",
     "DatabricksInstanceGroupId": "-6590731124564512850"
-  },
-  "state": "ACTIVE",
-  "stats": {
-    "used_count": 0,
-    "idle_count": 0,
-    "pending_used_count": 0,
-    "pending_idle_count": 0
-  },
-  "status": {}
+  }
 }

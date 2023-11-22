@@ -1,0 +1,1138 @@
+[
+  {
+    "instance_pool_name": "auto_loader_streaming_worker_issuing2",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c5d.9xlarge",
+    "idle_instance_autotermination_minutes": 1,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "10.5.x-scala2.12"
+    ],
+    "instance_pool_id": "0615-012132-tries176-pool-tyzlrqq8",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "5775317119473657",
+      "DatabricksInstancePoolId": "0615-012132-tries176-pool-tyzlrqq8",
+      "DatabricksInstanceGroupId": "-4941366408444976917"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 24,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "punctual_payload_driver",
+    "min_idle_instances": 0,
+    "max_capacity": 2,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1b",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.8xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "10.5.x-scala2.12"
+    ],
+    "instance_pool_id": "0911-032043-muggy53-pool-7n8supe8",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "0911-032043-muggy53-pool-7n8supe8",
+      "DatabricksInstanceGroupId": "-6590731124564512850"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "punctual_payload_worked",
+    "min_idle_instances": 0,
+    "max_capacity": 25,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1b",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.8xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "10.5.x-scala2.12"
+    ],
+    "instance_pool_id": "0911-032146-envy54-pool-z3bgwnps",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "0911-032146-envy54-pool-z3bgwnps",
+      "DatabricksInstanceGroupId": "-4715005037402046353"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_streaming_driver_banking_2",
+    "min_idle_instances": 0,
+    "max_capacity": 2,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.4xlarge",
+    "idle_instance_autotermination_minutes": 1,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "10.4.x-scala2.12"
+    ],
+    "instance_pool_id": "0921-213624-grown22-pool-kdddpxqo",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "5471482250341735",
+      "DatabricksInstancePoolId": "0921-213624-grown22-pool-kdddpxqo",
+      "DatabricksInstanceGroupId": "-5461484046823025818"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_driver_banking_",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.4xlarge",
+    "idle_instance_autotermination_minutes": 1,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "10.5.x-scala2.12"
+    ],
+    "instance_pool_id": "0930-163402-rural5-pool-32565kw0",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "0930-163402-rural5-pool-32565kw0",
+      "DatabricksInstanceGroupId": "-4799124430324501584"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_worker_banking_",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.4xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "10.5.x-scala2.12"
+    ],
+    "instance_pool_id": "0930-170508-serge6-pool-028k3768",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "0930-170508-serge6-pool-028k3768",
+      "DatabricksInstanceGroupId": "-5464932762970269198"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_driver_redhorn_",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.2xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "10.5.x-scala2.12"
+    ],
+    "instance_pool_id": "0930-170736-brute8-pool-np3cbnlg",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "0930-170736-brute8-pool-np3cbnlg",
+      "DatabricksInstanceGroupId": "-5975810218887196479"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_worker_redhorn_",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.2xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "10.5.x-scala2.12"
+    ],
+    "instance_pool_id": "0930-170921-resin9-pool-liqznf9s",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "0930-170921-resin9-pool-liqznf9s",
+      "DatabricksInstanceGroupId": "-7605471664108527883"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_issuing_driver_",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.4xlarge",
+    "custom_tags": {
+      "Autoloader": "issuing"
+    },
+    "idle_instance_autotermination_minutes": 1,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "10.5.x-scala2.12"
+    ],
+    "instance_pool_id": "0930-171054-tuner10-pool-dbbjbrps",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "0930-171054-tuner10-pool-dbbjbrps",
+      "DatabricksInstanceGroupId": "-6765039004529224163"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_issuing_worker_",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.4xlarge",
+    "custom_tags": {
+      "Autoloader": "issuing"
+    },
+    "idle_instance_autotermination_minutes": 1,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "10.5.x-scala2.12"
+    ],
+    "instance_pool_id": "0930-171209-bib11-pool-i4e0a5u8",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "0930-171209-bib11-pool-i4e0a5u8",
+      "DatabricksInstanceGroupId": "-9065306621397964589"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_streaming_driver_banking_",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.4xlarge",
+    "idle_instance_autotermination_minutes": 1,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "10.5.x-scala2.12"
+    ],
+    "instance_pool_id": "0930-171424-booms12-pool-viswycl0",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "0930-171424-booms12-pool-viswycl0",
+      "DatabricksInstanceGroupId": "-4987126037324109468"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_streaming_worker_banking_",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.8xlarge",
+    "idle_instance_autotermination_minutes": 1,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "10.5.x-scala2.12"
+    ],
+    "instance_pool_id": "0930-171648-offer13-pool-4b07jswg",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "0930-171648-offer13-pool-4b07jswg",
+      "DatabricksInstanceGroupId": "-5898484541235850520"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_streaming_driver_issuing_",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.8xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "10.5.x-scala2.12"
+    ],
+    "instance_pool_id": "0930-172546-cur16-pool-n2y9mz2o",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "0930-172546-cur16-pool-n2y9mz2o",
+      "DatabricksInstanceGroupId": "-7024392564894544353"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_streaming_driver_issuing__",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "r5.2xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "10.5.x-scala2.12"
+    ],
+    "instance_pool_id": "1003-142819-dog31-pool-qjatk1jl",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "1003-142819-dog31-pool-qjatk1jl",
+      "DatabricksInstanceGroupId": "-5336769568767747828"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 2,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_streaming_worker_banking_c5",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c5.4xlarge",
+    "idle_instance_autotermination_minutes": 1,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "10.5.x-scala2.12"
+    ],
+    "instance_pool_id": "1024-143041-coked38-pool-6kgxp3ps",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "5320451919151159",
+      "DatabricksInstancePoolId": "1024-143041-coked38-pool-6kgxp3ps",
+      "DatabricksInstanceGroupId": "-7761168715105933351"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 31,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_streaming_driver_banking_c5",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c5.9xlarge",
+    "idle_instance_autotermination_minutes": 1,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "10.4.x-scala2.12"
+    ],
+    "instance_pool_id": "1025-001935-flyby40-pool-apx8giz4",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "1025-001935-flyby40-pool-apx8giz4",
+      "DatabricksInstanceGroupId": "-8023186923798854088"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 3,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_issuing_worker__",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.4xlarge",
+    "idle_instance_autotermination_minutes": 1,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "11.3.x-scala2.12"
+    ],
+    "instance_pool_id": "1025-131839-mossy43-pool-v6atxpg0",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "5471482250341735",
+      "DatabricksInstancePoolId": "1025-131839-mossy43-pool-v6atxpg0",
+      "DatabricksInstanceGroupId": "-6994206347457146662"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_issuing_driver__",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.4xlarge",
+    "idle_instance_autotermination_minutes": 1,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "11.3.x-scala2.12"
+    ],
+    "instance_pool_id": "1025-132004-soul44-pool-sr05lv80",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "5471482250341735",
+      "DatabricksInstancePoolId": "1025-132004-soul44-pool-sr05lv80",
+      "DatabricksInstanceGroupId": "-7427807463542510046"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "dataquality_count_diario_driver",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6gd.12xlarge",
+    "idle_instance_autotermination_minutes": 60,
+    "enable_elastic_disk": false,
+    "disk_spec": {
+      "disk_type": {
+        "ebs_volume_type": "GENERAL_PURPOSE_SSD"
+      },
+      "disk_count": 2,
+      "disk_size": 100
+    },
+    "preloaded_spark_versions": [
+      "10.4.x-scala2.12"
+    ],
+    "instance_pool_id": "1114-174129-edits32-pool-bepcdw5s",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "1114-174129-edits32-pool-bepcdw5s",
+      "DatabricksInstanceGroupId": "-7888215571770877603"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "dataquality_count_diario_worker",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6gd.12xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": false,
+    "disk_spec": {
+      "disk_type": {
+        "ebs_volume_type": "GENERAL_PURPOSE_SSD"
+      },
+      "disk_count": 2,
+      "disk_size": 100
+    },
+    "preloaded_spark_versions": [
+      "10.4.x-scala2.12"
+    ],
+    "instance_pool_id": "1114-180751-taros33-pool-zj8xias0",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "1114-180751-taros33-pool-zj8xias0",
+      "DatabricksInstanceGroupId": "-6897932159889908543"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_driver_falcon",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.4xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": true,
+    "disk_spec": {
+      "disk_type": {
+        "ebs_volume_type": "GENERAL_PURPOSE_SSD"
+      },
+      "disk_count": 3,
+      "disk_size": 50
+    },
+    "preloaded_spark_versions": [
+      "11.3.x-scala2.12"
+    ],
+    "instance_pool_id": "1121-141922-petty18-pool-4hgmsnio",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "1121-141922-petty18-pool-4hgmsnio",
+      "DatabricksInstanceGroupId": "-8696791679484863371"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_streaming_driver_falcon",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.4xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "11.3.x-scala2.12"
+    ],
+    "instance_pool_id": "1121-142221-arks20-pool-s9e7bm6o",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "1121-142221-arks20-pool-s9e7bm6o",
+      "DatabricksInstanceGroupId": "-8671327891279202716"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_streaming_worker_falcon",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.4xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "11.3.x-scala2.12"
+    ],
+    "instance_pool_id": "1121-142622-liken21-pool-crlge2hc",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "1121-142622-liken21-pool-crlge2hc",
+      "DatabricksInstanceGroupId": "-5759578122617337303"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_driver_bpp_dw",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.4xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "11.3.x-scala2.12"
+    ],
+    "instance_pool_id": "1121-142740-fast22-pool-03cv632o",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "1121-142740-fast22-pool-03cv632o",
+      "DatabricksInstanceGroupId": "-5181612786789846089"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_worker_bpp_dw",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "SPOT",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 80
+    },
+    "node_type_id": "c6g.4xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": true,
+    "preloaded_spark_versions": [
+      "11.3.x-scala2.12"
+    ],
+    "instance_pool_id": "1121-142839-pigmy23-pool-3saqw0eo",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8334682456605472",
+      "DatabricksInstancePoolId": "1121-142839-pigmy23-pool-3saqw0eo",
+      "DatabricksInstanceGroupId": "-6689660328163583005"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_worker_banking_v2",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "SPOT",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c5d.12xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": false,
+    "instance_pool_id": "0313-144215-gaff226-pool-890kddsg",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "5634189882819304",
+      "DatabricksInstancePoolId": "0313-144215-gaff226-pool-890kddsg",
+      "DatabricksInstanceGroupId": "-4744486600435362879"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_driver_banking_v2",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "SPOT",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c5d.xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": false,
+    "instance_pool_id": "0313-155331-wags229-pool-tx27zcb4",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "5634189882819304",
+      "DatabricksInstancePoolId": "0313-155331-wags229-pool-tx27zcb4",
+      "DatabricksInstanceGroupId": "-5304978711835844153"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_worker_banking_v3",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "SPOT",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c5d.9xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": false,
+    "instance_pool_id": "0316-222802-matte524-pool-5fkgmo7l",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8577112736979751",
+      "DatabricksInstancePoolId": "0316-222802-matte524-pool-5fkgmo7l",
+      "DatabricksInstanceGroupId": "-8831341394533215195"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_driver_banking_v3",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c5d.4xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": false,
+    "instance_pool_id": "0316-222922-isms449-pool-058r979s",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8577112736979751",
+      "DatabricksInstancePoolId": "0316-222922-isms449-pool-058r979s",
+      "DatabricksInstanceGroupId": "-4768256259117013976"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_falcon_v3_worker",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c5d.9xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": false,
+    "disk_spec": {
+      "disk_type": {
+        "ebs_volume_type": "GENERAL_PURPOSE_SSD"
+      },
+      "disk_count": 1,
+      "disk_size": 400
+    },
+    "instance_pool_id": "0401-155323-mug151-pool-fo675wr4",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8577112736979751",
+      "DatabricksInstancePoolId": "0401-155323-mug151-pool-fo675wr4",
+      "DatabricksInstanceGroupId": "-6581370058890771666"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_falcon_driver_v2",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.4xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": false,
+    "disk_spec": {
+      "disk_type": {
+        "ebs_volume_type": "GENERAL_PURPOSE_SSD"
+      },
+      "disk_count": 1,
+      "disk_size": 100
+    },
+    "instance_pool_id": "0402-211902-swans176-pool-5b84twy8",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8577112736979751",
+      "DatabricksInstancePoolId": "0402-211902-swans176-pool-5b84twy8",
+      "DatabricksInstanceGroupId": "-6018741910365083745"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "auto_loader_batch_falcon_worker_v2",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c6g.12xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": true,
+    "instance_pool_id": "0402-212120-photo186-pool-2tnwrjm8",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8577112736979751",
+      "DatabricksInstancePoolId": "0402-212120-photo186-pool-2tnwrjm8",
+      "DatabricksInstanceGroupId": "-8619780899612374804"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "pool-dockone",
+    "min_idle_instances": 1,
+    "max_capacity": 5,
+    "aws_attributes": {
+      "availability": "SPOT",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "i3.2xlarge",
+    "idle_instance_autotermination_minutes": 15,
+    "enable_elastic_disk": false,
+    "preloaded_spark_versions": [
+      "11.3.x-scala2.12"
+    ],
+    "instance_pool_id": "0630-171456-cot312-pool-4bph0e1c",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "8729527070203721",
+      "DatabricksInstancePoolId": "0630-171456-cot312-pool-4bph0e1c",
+      "DatabricksInstanceGroupId": "-5057967310438749498"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 1,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "dlt_falcon_worker",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c5d.9xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": false,
+    "disk_spec": {
+      "disk_type": {
+        "ebs_volume_type": "GENERAL_PURPOSE_SSD"
+      },
+      "disk_count": 1,
+      "disk_size": 400
+    },
+    "instance_pool_id": "1030-142603-affix81-pool-ow6ozkkc",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "5634189882819304",
+      "DatabricksInstancePoolId": "1030-142603-affix81-pool-ow6ozkkc",
+      "DatabricksInstanceGroupId": "-8900753292417746846"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "dlt_falcon_driver",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "r5.2xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": true,
+    "instance_pool_id": "1030-142824-kapok93-pool-jwaue58w",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "5634189882819304",
+      "DatabricksInstancePoolId": "1030-142824-kapok93-pool-jwaue58w",
+      "DatabricksInstanceGroupId": "-4763848275131701306"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 0,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "dlt_issuing_driver",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "r5.2xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": true,
+    "instance_pool_id": "1103-184853-evade255-pool-bgmq4r2o",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "5634189882819304",
+      "DatabricksInstancePoolId": "1103-184853-evade255-pool-bgmq4r2o",
+      "DatabricksInstanceGroupId": "-5875839682624850516"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 1,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  },
+  {
+    "instance_pool_name": "dlt_issuing_worker",
+    "min_idle_instances": 0,
+    "aws_attributes": {
+      "availability": "ON_DEMAND",
+      "zone_id": "us-east-1a",
+      "spot_bid_price_percent": 100
+    },
+    "node_type_id": "c5d.9xlarge",
+    "idle_instance_autotermination_minutes": 5,
+    "enable_elastic_disk": false,
+    "disk_spec": {
+      "disk_type": {
+        "ebs_volume_type": "GENERAL_PURPOSE_SSD"
+      },
+      "disk_count": 1,
+      "disk_size": 400
+    },
+    "instance_pool_id": "1103-185022-stomp256-pool-dx54gzlg",
+    "default_tags": {
+      "Vendor": "Databricks",
+      "DatabricksInstancePoolCreatorId": "5634189882819304",
+      "DatabricksInstancePoolId": "1103-185022-stomp256-pool-dx54gzlg",
+      "DatabricksInstanceGroupId": "-6841785776774144279"
+    },
+    "state": "ACTIVE",
+    "stats": {
+      "used_count": 13,
+      "idle_count": 0,
+      "pending_used_count": 0,
+      "pending_idle_count": 0
+    },
+    "status": {}
+  }
+]
