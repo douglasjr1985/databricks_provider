@@ -5,8 +5,8 @@ on:
     branches:
       - main
       - master
-  #  paths:
-  #    - 'resources/**'  # Only changes in the "resources" folder will trigger the workflow..
+    paths:
+      - 'resources/**'  # Only changes in the "resources" folder will trigger the workflow..
   
 jobs:
   build:
@@ -27,8 +27,8 @@ jobs:
       run: make install
       # Description: Install project dependencies by running the Makefile
 
- #   - name: Run Tests
- #     run: make test
+    - name: Run Tests
+      run: make test
       # Description: Execute project tests using the Makefile
 
     - name: List Modified Files
