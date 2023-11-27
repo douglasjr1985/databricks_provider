@@ -6,7 +6,7 @@ on:
       - main
       - master
     paths:
-      - 'resources/**'  # Only changes in the "resources" folder will trigger the workflow..
+      - 'resource/**'  # Only changes in the "resources" folder will trigger the workflow..
   
 jobs:
   build:

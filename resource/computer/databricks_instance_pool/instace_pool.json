@@ -1,7 +1,7 @@
 {
   "instance_pool_name": "instace_pool",
   "min_idle_instances": 1,
-  "max_capacity": 100,
+  "max_capacity": 99,
   "idle_instance_autotermination_minutes": 15,
   "node_type_id": "i3.xlarge",
   "preloaded_spark_versions": ["7.3.x-scala2.12"],
