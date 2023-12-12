@@ -1,22 +1,22 @@
 {
-  "instance_pool_name": "auto_loader_batch_driver_banking_",
+  "instance_pool_name": "auto_loader_streaming_worker_banking_c5",
   "min_idle_instances": 0,
   "aws_attributes": {
     "availability": "ON_DEMAND",
     "zone_id": "us-east-1a",
     "spot_bid_price_percent": 100
   },
-  "node_type_id": "c6g.4xlarge",
+  "node_type_id": "c5.4xlarge",
   "idle_instance_autotermination_minutes": 1,
   "enable_elastic_disk": true,
   "preloaded_spark_versions": [
     "10.5.x-scala2.12"
   ],
-  "instance_pool_id": "0930-163402-rural5-pool-32565kw0",
+  "instance_pool_id": "1024-143041-coked38-pool-6kgxp3ps",
   "default_tags": {
     "Vendor": "Databricks",
-    "DatabricksInstancePoolCreatorId": "8334682456605472",
-    "DatabricksInstancePoolId": "0930-163402-rural5-pool-32565kw0",
-    "DatabricksInstanceGroupId": "-4799124430324501584"
+    "DatabricksInstancePoolCreatorId": "5320451919151159",
+    "DatabricksInstancePoolId": "1024-143041-coked38-pool-6kgxp3ps",
+    "DatabricksInstanceGroupId": "-7761168715105933351"
   }
 }

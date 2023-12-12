@@ -1,0 +1,29 @@
+{
+  "instance_pool_name": "dataquality_count_diario_driver",
+  "min_idle_instances": 0,
+  "aws_attributes": {
+    "availability": "ON_DEMAND",
+    "zone_id": "us-east-1a",
+    "spot_bid_price_percent": 100
+  },
+  "node_type_id": "c6gd.12xlarge",
+  "idle_instance_autotermination_minutes": 60,
+  "enable_elastic_disk": false,
+  "disk_spec": {
+    "disk_type": {
+      "ebs_volume_type": "GENERAL_PURPOSE_SSD"
+    },
+    "disk_count": 2,
+    "disk_size": 100
+  },
+  "preloaded_spark_versions": [
+    "10.4.x-scala2.12"
+  ],
+  "instance_pool_id": "1114-174129-edits32-pool-bepcdw5s",
+  "default_tags": {
+    "Vendor": "Databricks",
+    "DatabricksInstancePoolCreatorId": "8334682456605472",
+    "DatabricksInstancePoolId": "1114-174129-edits32-pool-bepcdw5s",
+    "DatabricksInstanceGroupId": "-7888215571770877603"
+  }
+}
