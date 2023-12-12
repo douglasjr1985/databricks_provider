@@ -1,0 +1,23 @@
+{
+  "instance_pool_name": "pool-dockone",
+  "min_idle_instances": 1,
+  "max_capacity": 5,
+  "aws_attributes": {
+    "availability": "SPOT",
+    "zone_id": "us-east-1a",
+    "spot_bid_price_percent": 100
+  },
+  "node_type_id": "i3.2xlarge",
+  "idle_instance_autotermination_minutes": 15,
+  "enable_elastic_disk": false,
+  "preloaded_spark_versions": [
+    "11.3.x-scala2.12"
+  ],
+  "instance_pool_id": "0630-171456-cot312-pool-4bph0e1c",
+  "default_tags": {
+    "Vendor": "Databricks",
+    "DatabricksInstancePoolCreatorId": "8729527070203721",
+    "DatabricksInstancePoolId": "0630-171456-cot312-pool-4bph0e1c",
+    "DatabricksInstanceGroupId": "-5057967310438749498"
+  }
+}
