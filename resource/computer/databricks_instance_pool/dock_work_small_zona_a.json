@@ -1,15 +1,15 @@
 {
-  "instance_pool_name": "dock_work_small_zona_a",
-  "min_idle_instances": 0,
-  "idle_instance_autotermination_minutes": 1,
-  "node_type_id": "c6gd.2xlarge",
-  "aws_attributes": {
-    "first_on_demand": 1,
-    "availability": "SPOT_WITH_FALLBACK",
+  "instance_pool_name":"dock_work_small_zona_a",
+  "min_idle_instances":0,
+  "idle_instance_autotermination_minutes":1,
+  "enable_elastic_disk":true,
+  "node_type_id":"c6gd.2xlarge",
+  "aws_attributes":{
+    "availability": "SPOT",
     "zone_id": "us-east-1a",
     "spot_bid_price_percent": 100
   },
-  "custom_tags": {
+  "custom_tags":{
     "Env": "prd",
     "Squad": "data engineering",
     "Tribe": "data"
