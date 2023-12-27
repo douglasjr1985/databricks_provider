@@ -1,23 +1,21 @@
 import logging
-import json
 
-from requests.exceptions import HTTPError, RequestException
-from databricks_cli.sdk.api_client import ApiClient
 from databricks_cli.instance_pools.api import InstancePoolsApi
+from databricks_cli.sdk.api_client import ApiClient
+from requests.exceptions import HTTPError, RequestException
 
 class DatabricksInstancePoolManager:
     """
     Manages instance pool operations in Databricks, including listing, creating,
     and editing instance pools.
     """
-    def __init__(self, workspace_url, client_secret, path_config):
+    def __init__(self, workspace_url, client_secret):
         """
         Initialize the DatabricksInstancePoolManager with the Databricks workspace URL,
         API token, and the path for configuration files.
         """
         self.host = f"https://{workspace_url}/"
         self.token = client_secret
-        self.path_config = path_config
         self.instance_pools_api = InstancePoolsApi(ApiClient(host=self.host, token=self.token))
 
     def _list_instance_pools(self, pool_name: str):

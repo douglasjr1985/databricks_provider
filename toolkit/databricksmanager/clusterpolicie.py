@@ -1,8 +1,8 @@
 import logging
 
-from requests.exceptions import HTTPError, RequestException
 from databricks_cli.cluster_policies.api import ClusterPolicyApi
 from databricks_cli.sdk.api_client import ApiClient
+from requests.exceptions import HTTPError, RequestException
 
 # Configurando o logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -12,18 +12,16 @@ class DatabricksClusterPolicie:
     Manages instance pool operations in Databricks, including listing, creating,
     and editing instance pools.
     """
-    def __init__(self, workspace_url: str, client_secret: str, path_config: str):
+    def __init__(self, workspace_url: str, client_secret: str):
         """
         Initialize the DatabricksInstancePoolManager with the Databricks workspace URL,
         API token, and the path for configuration files.
 
         :param workspace_url: URL of the Databricks workspace.
         :param client_secret: API token for authentication.
-        :param path_config: Path to the configuration files.
         """
         self.host = f"https://{workspace_url}/"
         self.token = client_secret
-        self.path_config = path_config
         self.cluster_policie_api = ClusterPolicyApi(ApiClient(host=self.host, token=self.token))
 
     def _list_cluster_policies(self, policie_name: str):
@@ -50,10 +48,10 @@ class DatabricksClusterPolicie:
         try:
             police_id = self._list_cluster_policies(policie_name)
             if police_id:
-                self.cluster_policie_api.edit_cluster_police(police_id, json=police_config)
+                self.cluster_policie_api.edit_cluster_policy(police_id, json=police_config)
                 logging.info(f"Cluster police '{policie_name}' edited successfully.")
             else:
-                self.cluster_policie_api.create_cluster_police(police_config)
+                self.cluster_policie_api.create_cluster_policy(police_config)
                 logging.info(f"Cluster police '{policie_name}' created successfully.")
         except HTTPError as e:
             logging.error(f"HTTP error during police '{policie_name}' operation: {e}")

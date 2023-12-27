@@ -1,14 +1,8 @@
 import argparse
 import logging
-import json
-import sys
 
+from configure_logging import LoggingConfigurator
 from toolkit.resourcecontroller import Config
-
-def configure_logging():
-    """Configures the logging settings."""
-    logging.basicConfig(stream=sys.stdout, level=logging.INFO, 
-                        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 def parse_arguments():
     """Parses command-line arguments."""
@@ -20,7 +14,8 @@ def parse_arguments():
 
 def main():
     # Configure logging
-    configure_logging()
+    logger = LoggingConfigurator()
+    logger.configure_logging()
 
     # Parse command-line arguments
     args = parse_arguments()

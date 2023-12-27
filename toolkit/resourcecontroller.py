@@ -1,9 +1,9 @@
 import json
 import logging
 
-from toolkit.databricksmanager.instancepool import  DatabricksInstancePoolManager
 from toolkit.databricksmanager.cluster import  DatabricksClusterManager
 from toolkit.databricksmanager.clusterpolicie import  DatabricksClusterPolicie
+from toolkit.databricksmanager.instancepool import  DatabricksInstancePoolManager
 
 class Config:
 
