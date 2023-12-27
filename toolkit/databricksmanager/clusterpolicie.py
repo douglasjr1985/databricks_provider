@@ -7,7 +7,7 @@ from databricks_cli.sdk.api_client import ApiClient
 # Configurando o logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-class DatabricksClusterPolice:
+class DatabricksClusterPolicie:
     """
     Manages instance pool operations in Databricks, including listing, creating,
     and editing instance pools.
@@ -24,46 +24,46 @@ class DatabricksClusterPolice:
         self.host = f"https://{workspace_url}/"
         self.token = client_secret
         self.path_config = path_config
-        self.cluster_police_api = ClusterpoliceApi(ApiClient(host=self.host, token=self.token))
+        self.cluster_policie_api = ClusterpoliceApi(ApiClient(host=self.host, token=self.token))
 
-    def _list_cluster_policies(self, police_name: str):
+    def _list_cluster_policies(self, policie_name: str):
         """
         List cluster policies and return the ID of the police with the specified name.
 
-        :param police_name: Name of the police to find.
+        :param policie_name: Name of the police to find.
         :return: ID of the found police or None.
         """
         try:
-            policies = self.cluster_police_api.list_cluster_policies().get('policies', [])
-            return next((police['police_id'] for police in policies if police.get('name') == police_name), None)
+            policies = self.cluster_policie_api.list_cluster_policies().get('policies', [])
+            return next((police['police_id'] for police in policies if police.get('name') == policie_name), None)
         except Exception as e:
             logging.error(f"Error occurred while listing cluster policies: {e}")
             raise
 
-    def create_or_edit_resource(self, police_name: str, police_config: dict):
+    def create_or_edit_resource(self, policie_name: str, police_config: dict):
         """
         Create or edit a cluster police based on the provided name and configuration.
 
-        :param police_name: Name of the police to create or edit.
+        :param policie_name: Name of the police to create or edit.
         :param police_config: Configuration of the police.
         """
         try:
-            police_id = self._list_cluster_policies(police_name)
+            police_id = self._list_cluster_policies(policie_name)
             if police_id:
-                self.cluster_police_api.edit_cluster_police(police_id, json=police_config)
-                logging.info(f"Cluster police '{police_name}' edited successfully.")
+                self.cluster_policie_api.edit_cluster_police(police_id, json=police_config)
+                logging.info(f"Cluster police '{policie_name}' edited successfully.")
             else:
-                self.cluster_police_api.create_cluster_police(police_config)
-                logging.info(f"Cluster police '{police_name}' created successfully.")
+                self.cluster_policie_api.create_cluster_police(police_config)
+                logging.info(f"Cluster police '{policie_name}' created successfully.")
         except HTTPError as e:
-            logging.error(f"HTTP error during police '{police_name}' operation: {e}")
+            logging.error(f"HTTP error during police '{policie_name}' operation: {e}")
             raise
         except RequestException as req_error:
-            logging.error(f"Request error in police '{police_name}' operation: {req_error}")
+            logging.error(f"Request error in police '{policie_name}' operation: {req_error}")
             raise
         except (IOError, OSError) as file_error:
-            logging.error(f"File IO error in police '{police_name}' operation: {file_error}")
+            logging.error(f"File IO error in police '{policie_name}' operation: {file_error}")
             raise
         except Exception as general_error:
-            logging.error(f"General error in police '{police_name}' operation: {general_error}")
+            logging.error(f"General error in police '{policie_name}' operation: {general_error}")
             raise
