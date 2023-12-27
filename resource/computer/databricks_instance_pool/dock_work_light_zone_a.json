@@ -1,5 +1,5 @@
 {
-  "instance_pool_name":"dock_work_light_zona_a",
+  "instance_pool_name":"dock_work_light_zone_a",
   "min_idle_instances":1,
   "idle_instance_autotermination_minutes":1,
   "enable_elastic_disk":true,
@@ -10,7 +10,7 @@
     "spot_bid_price_percent": 100
   },
   "custom_tags":{
-    "PoolName": "dock_work_light_zona_a"
+    "PoolName": "dock_work_light_zone_a"
   }
 }
 
