@@ -3,9 +3,9 @@
   "min_idle_instances":1,
   "idle_instance_autotermination_minutes":1,
   "enable_elastic_disk":true,
-  "node_type_id":"c6g.2xlarge",
+  "node_type_id":"c6g.4xlarge",
   "aws_attributes":{
-    "availability": "SPOT",
+    "availability": "ON_DEMAND",
     "zone_id": "us-east-1a",
     "spot_bid_price_percent": 100
   },
