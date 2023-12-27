@@ -32,11 +32,16 @@ class DatabricksClusterPolicie:
         :return: ID of the found police or None.
         """
         try:
-            policies = self.cluster_policie_api.list_cluster_policies().get('policies', [])
-            return next((police['police_id'] for police in policies if police.get('name') == policie_name), None)
+            policies_response = self.cluster_policie_api.list_cluster_policies()
+            policies_list = policies_response.get('policies', [])
+
+            for policies in policies_list:
+                if policies.get('name') == policie_name:
+                    return policies.get('police_id')
         except Exception as e:
             logging.error(f"Error occurred while listing cluster policies: {e}")
-            raise
+            
+        return None
 
     def create_or_edit_resource(self, policie_name: str, police_config: dict):
         """
