@@ -5,6 +5,7 @@ from toolkit.databricksmanager.cluster import  DatabricksClusterManager
 from toolkit.databricksmanager.clusterpolicie import  DatabricksClusterPolicie
 from toolkit.databricksmanager.instancepool import  DatabricksInstancePoolManager
 
+
 class Config:
 
     def __init__(self,workspace_url,client_secret, path_config):
