@@ -1,47 +1,43 @@
 {
-    "policy_id": "0001C15BD991F936",
-    "name": "docker_light_zone_b",
-    "definition": {
-      "spark_conf.spark.databricks.cluster.profile": {
-        "type": "forbidden",
-        "hidden": true
-      },
-      "spark_version": {
-        "type": "unlimited",
-        "defaultValue": "auto:latest"
-      },
-      "instance_pool_id": {
-        "type": "fixed",
-        "value": "1227-102443-hatch65-pool-91nowuts"
-      },
-      "driver_instance_pool_id": {
-        "type": "fixed",
-        "value": "1227-102436-soaks80-pool-b9h6t0y8"
-      },
-      "num_workers": {
-        "type": "forbidden",
-        "hidden": true
-      },
-      "autoscale.min_workers": {
-        "type": "unlimited",
-        "defaultValue": 1
-      },
-      "autoscale.max_workers": {
-        "type": "unlimited",
-        "defaultValue": 2
-      },
-      "aws_attributes.instance_profile_arn": {
-        "type": "allowlist",
-        "values": [
-          "arn:aws:iam::463684499885:instance-profile/DatabricksGlueHML"
-        ]
-      },
-      "spark_conf.spark.databricks.hive.metastore.glueCatalog.enabled": {
-        "type": "fixed",
-        "value": "true"
-      }
+  "name": "docker_light_zone_b",
+  "definition": {
+    "spark_conf.spark.databricks.cluster.profile": {
+      "type": "forbidden",
+      "hidden": "true"
     },
-    "created_at_timestamp": 1703645498000,
-    "is_default": false
+    "spark_version": {
+      "type": "unlimited",
+      "defaultValue": "auto:latest"
+    },
+    "instance_pool_id": {
+      "type": "fixed",
+      "value": "1227-102443-hatch65-pool-91nowuts"
+    },
+    "driver_instance_pool_id": {
+      "type": "fixed",
+      "value": "1227-102436-soaks80-pool-b9h6t0y8"
+    },
+    "num_workers": {
+      "type": "forbidden",
+      "hidden": "true"
+    },
+    "autoscale.min_workers": {
+      "type": "unlimited",
+      "defaultValue": 1
+    },
+    "autoscale.max_workers": {
+      "type": "unlimited",
+      "defaultValue": 2
+    },
+    "aws_attributes.instance_profile_arn": {
+      "type": "allowlist",
+      "values": [
+        "arn:aws:iam::463684499885:instance-profile/DatabricksGlueHML"
+      ]
+    },
+    "spark_conf.spark.databricks.hive.metastore.glueCatalog.enabled": {
+      "type": "fixed",
+      "value": "true"
+    }
   }
-  
+}
