@@ -3,7 +3,7 @@
   "definition": {
     "spark_conf.spark.databricks.cluster.profile": {
       "type": "forbidden",
-      "hidden": "true"
+      "hidden": true
     },
     "spark_version": {
       "type": "unlimited",
@@ -19,7 +19,7 @@
     },
     "num_workers": {
       "type": "forbidden",
-      "hidden": "true"
+      "hidden": true
     },
     "autoscale.min_workers": {
       "type": "unlimited",
@@ -37,7 +37,7 @@
     },
     "spark_conf.spark.databricks.hive.metastore.glueCatalog.enabled": {
       "type": "fixed",
-      "value": "true"
+      "value": true
     }
   }
 }
