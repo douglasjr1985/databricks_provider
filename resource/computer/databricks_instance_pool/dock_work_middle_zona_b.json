@@ -10,9 +10,7 @@
     "spot_bid_price_percent": 100
   },
   "custom_tags":{
-    "Env": "prd",
-    "Squad": "data engineering",
-    "Tribe": "data"
+    "PoolName": "dock_work_middle_zona_b"
   }
 }
 
