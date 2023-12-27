@@ -11,11 +11,11 @@
     },
     "instance_pool_id": {
       "type": "fixed",
-      "value": "1227-102443-hatch65-pool-91nowuts"
+      "value": "1227-133511-limes98-pool-3025ieq8"
     },
     "driver_instance_pool_id": {
       "type": "fixed",
-      "value": "1227-102436-soaks80-pool-b9h6t0y8"
+      "value": "1227-133922-link90-pool-rswdp5ao"
     },
     "num_workers": {
       "type": "forbidden",
