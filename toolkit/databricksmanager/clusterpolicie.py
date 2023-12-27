@@ -1,7 +1,7 @@
-import json
 import logging
+
 from requests.exceptions import HTTPError, RequestException
-from databricks_cli.cluster_policies.api import ClusterpoliceApi
+from databricks_cli.cluster_policies.api import ClusterPolicyApi
 from databricks_cli.sdk.api_client import ApiClient
 
 # Configurando o logging
@@ -24,7 +24,7 @@ class DatabricksClusterPolicie:
         self.host = f"https://{workspace_url}/"
         self.token = client_secret
         self.path_config = path_config
-        self.cluster_policie_api = ClusterpoliceApi(ApiClient(host=self.host, token=self.token))
+        self.cluster_policie_api = ClusterPolicyApi(ApiClient(host=self.host, token=self.token))
 
     def _list_cluster_policies(self, policie_name: str):
         """
