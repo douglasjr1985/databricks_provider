@@ -3,7 +3,7 @@ import logging
 
 from toolkit.databricksmanager.instancepool import  DatabricksInstancePoolManager
 from toolkit.databricksmanager.cluster import  DatabricksClusterManager
-from toolkit.databricksmanager.clusterpolicies import  DatabricksInstancePoolManager
+from toolkit.databricksmanager.clusterpolicie import  DatabricksClusterPolicie
 
 class Config:
 
@@ -49,8 +49,8 @@ class Config:
                 self.manage_databricks_resource(DatabricksInstancePoolManager, pool_name, config)
             case [_, _, "databricks_cluster", cluster_name, *_]:
                 self.manage_databricks_resource(DatabricksClusterManager, cluster_name, config)
-            case [_, _, "databricks_cluster_policy", policy_name, *_]:
-                self.manage_databricks_resource(DatabricksInstancePoolManager, policy_name, config)                
+            case [_, _, "databricks_cluster_policy", policie_name, *_]:
+                self.manage_databricks_resource(DatabricksClusterPolicie, policie_name, config)                
 
     def manage_databricks_resource(self, manager_class, resource_name, config):
         """
