@@ -37,7 +37,7 @@
     },
     "spark_conf.spark.databricks.hive.metastore.glueCatalog.enabled": {
       "type": "fixed",
-      "value": true
+      "value": "true"
     }
   }
 }
