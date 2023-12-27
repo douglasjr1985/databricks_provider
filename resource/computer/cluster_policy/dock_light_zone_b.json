@@ -1,5 +1,5 @@
 {
-  "name": "docker_light_zone_b",
+  "name": "dock_light_zone_b",
   "definition": {
     "spark_conf.spark.databricks.cluster.profile": {
       "type": "forbidden",
