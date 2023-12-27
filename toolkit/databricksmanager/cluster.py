@@ -9,14 +9,13 @@ class DatabricksClusterManager:
     Manages cluster operations in Databricks, including listing, creating,
     and editing clusters.
     """
-    def __init__(self, workspace_url, client_secret, path_config):
+    def __init__(self, workspace_url, client_secret):
         """
         Initialize the DatabricksClusterManager with the Databricks workspace URL,
         API token, and the path for configuration files.
         """
         self.host = f"https://{workspace_url}/"
         self.token = client_secret
-        self.path_config = path_config
         self.cluster_api = ClusterApi(ApiClient(host=self.host, token=self.token))
 
     def _list_clusters(self, cluster_name: str):
