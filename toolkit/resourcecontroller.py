@@ -54,7 +54,7 @@ class Config:
 
     def manage_databricks_resource(self, manager_class, resource_name, config):
         """
-        Manages a Databricks resource (instance pool or cluster).
+        Manages a Databricks resource.
         """
         manager = manager_class(self.workspace_url, self.client_secret, self.path_config)
         manager.create_or_edit_resource(resource_name, config)
