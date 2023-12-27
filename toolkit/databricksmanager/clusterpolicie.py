@@ -1,8 +1,8 @@
 import logging
 
-from requests.exceptions import HTTPError, RequestException
 from databricks_cli.cluster_policies.api import ClusterPolicyApi
 from databricks_cli.sdk.api_client import ApiClient
+from requests.exceptions import HTTPError, RequestException
 
 # Configurando o logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

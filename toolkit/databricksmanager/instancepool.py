@@ -1,8 +1,8 @@
 import logging
 
-from requests.exceptions import HTTPError, RequestException
-from databricks_cli.sdk.api_client import ApiClient
 from databricks_cli.instance_pools.api import InstancePoolsApi
+from databricks_cli.sdk.api_client import ApiClient
+from requests.exceptions import HTTPError, RequestException
 
 class DatabricksInstancePoolManager:
     """
