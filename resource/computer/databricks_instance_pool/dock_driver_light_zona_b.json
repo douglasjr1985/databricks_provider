@@ -6,7 +6,7 @@
   "node_type_id":"c6g.xlarge",
   "aws_attributes":{
     "availability": "ON_DEMAND",
-    "zone_id": "us-east-1a",
+    "zone_id": "us-east-1b",
     "spot_bid_price_percent": 100
   },
   "custom_tags":{
