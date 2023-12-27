@@ -70,3 +70,4 @@ class DatabricksClusterPolicie:
         except Exception as general_error:
             logging.error(f"General error in police '{policie_name}' operation: {general_error}")
             raise
+
