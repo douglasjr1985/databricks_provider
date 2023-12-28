@@ -40,7 +40,6 @@ class DatabricksClusterPolicie:
                     return policies.get('police_id')
         except Exception as e:
             logging.error(f"Error occurred while listing cluster policies: {e}")
-            
         return None
 
     def create_or_edit_resource(self, policie_name: str, police_config: dict):
@@ -60,14 +59,11 @@ class DatabricksClusterPolicie:
                 logging.info(f"Cluster police '{policie_name}' created successfully.")
         except HTTPError as e:
             logging.error(f"HTTP error during police '{policie_name}' operation: {e}")
-            raise
         except RequestException as req_error:
             logging.error(f"Request error in police '{policie_name}' operation: {req_error}")
-            raise
         except (IOError, OSError) as file_error:
             logging.error(f"File IO error in police '{policie_name}' operation: {file_error}")
-            raise
         except Exception as general_error:
             logging.error(f"General error in police '{policie_name}' operation: {general_error}")
-            raise
+            
 

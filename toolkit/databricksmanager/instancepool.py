@@ -32,7 +32,6 @@ class DatabricksInstancePoolManager:
                     return pool.get('instance_pool_id')
         except Exception as e:
             logging.error(f"Error occurred: {e}")
-            raise
         return None
 
     def create_or_edit_resource(self, pool_name: str, pool_config: dict):
@@ -52,14 +51,10 @@ class DatabricksInstancePoolManager:
                 logging.info(f"Instance pool '{pool_name}' created successfully.")        
         except HTTPError as e:
             logging.error(f"HTTP error during instance pool '{pool_name}': {e}")
-            raise
         except RequestException as req_error:
             logging.error(f"HTTP request error in creating/editing instance pool '{pool_name}': {req_error}")
-            raise
         except (IOError, OSError) as file_error:
             logging.error(f"File IO error in creating/editing instance pool '{pool_name}': {file_error}")
-            raise
         except Exception as general_error:
             logging.error(f"General error in creating/editing instance pool '{pool_name}': {general_error}")
-            raise
-        
+            
