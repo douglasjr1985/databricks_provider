@@ -11,11 +11,11 @@
     },
     "instance_pool_id": {
       "type": "fixed",
-      "value": "1227-164710-dyers102-pool-s0oyhyq8"
+      "value": "1228-111248-afoul78-pool-z7f83lsw"
     },
     "driver_instance_pool_id": {
       "type": "fixed",
-      "value": "1227-164710-dyers102-pool-s0oyhyq8"
+      "value": "1228-111243-muss80-pool-53xavq4w"
     },
     "num_workers": {
       "type": "forbidden",
