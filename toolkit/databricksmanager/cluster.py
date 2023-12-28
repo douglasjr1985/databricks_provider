@@ -48,14 +48,11 @@ class DatabricksClusterManager:
                 self.cluster_api.create_cluster(cluster_config)
                 logging.info(f"Cluster '{cluster_id}' created successfully.")
         except HTTPError as e:
-            logging.error(f"HTTP error during cluster '{cluster_name}': {e}")
-            
+            logging.error(f"HTTP error during cluster '{cluster_name}': {e}")         
         except RequestException as req_error:
-            logging.error(f"HTTP request error in creating/editing cluster '{cluster_name}': {req_error}")
-                        
+            logging.error(f"HTTP request error in creating/editing cluster '{cluster_name}': {req_error}")        
         except (IOError, OSError) as file_error:
-            logging.error(f"File IO error in creating/editing cluster '{cluster_name}': {file_error}")
-                        
+            logging.error(f"File IO error in creating/editing cluster '{cluster_name}': {file_error}")         
         except Exception as general_error:
             logging.error(f"General error in creating/editing cluster '{cluster_name}': {general_error}")
                            
