@@ -1,0 +1,16 @@
+{
+  "instance_pool_name":"dock_work_middle_zone_b",
+  "min_idle_instances":0,
+  "idle_instance_autotermination_minutes":1,
+  "enable_elastic_disk":true,
+  "node_type_id":"c6g.4xlarge",
+  "aws_attributes":{
+    "availability": "SPOT",
+    "zone_id": "us-east-1b",
+    "spot_bid_price_percent": 100
+  },
+  "custom_tags":{
+    "PoolName": "dock_work_middle_zone_b"
+  }
+}
+
