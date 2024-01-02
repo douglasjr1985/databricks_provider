@@ -2,7 +2,14 @@
   "instance_pool_name":"dock_driver_large_zone_b",
   "min_idle_instances":0,
   "idle_instance_autotermination_minutes":1,
-  "enable_elastic_disk":true,
+  "enable_elastic_disk":false,
+  "disk_spec":{
+     "disk_type":{
+        "ebs_volume_type":"THROUGHPUT_OPTIMIZED_HDD"
+     },
+     "disk_count":1,
+     "disk_size":500
+  },
   "node_type_id":"c6g.8xlarge",
   "aws_attributes":{
     "availability": "ON_DEMAND",
