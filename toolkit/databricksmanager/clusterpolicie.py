@@ -4,8 +4,6 @@ from databricks_cli.cluster_policies.api import ClusterPolicyApi
 from databricks_cli.sdk.api_client import ApiClient
 from requests.exceptions import HTTPError, RequestException
 
-# Configurando o logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class DatabricksClusterPolicie:
     """
@@ -34,36 +32,31 @@ class DatabricksClusterPolicie:
         try:
             policies_response = self.cluster_policie_api.list_cluster_policies()
             policies_list = policies_response.get('policies', [])
-
-            for policies in policies_list:
-                if policies.get('name') == policie_name:
-                    return policies.get('police_id')
+            return (any(policy.get('name') == policie_name for policy in policies_list)).get('police_id')
         except Exception as e:
-            logging.error(f"Error occurred while listing cluster policies: {e}")
+            logging.error(f"Error occurred while searching the police {policie_name} in list of active cluster policies: {e}")
         return None
 
     def create_or_edit_resource(self, policie_name: str, police_config: dict):
         """
         Create or edit a cluster police based on the provided name and configuration.
 
-        :param policie_name: Name of the police to create or edit.
-        :param police_config: Configuration of the police.
+        :param policy_name: Name of the policy to create or edit.
+        :param policy_config: Configuration of the policy.
         """
         try:
             police_id = self._list_cluster_policies(policie_name)
             if police_id:
                 self.cluster_policie_api.edit_cluster_policy(police_id, json=police_config)
-                logging.info(f"Cluster police '{policie_name}' edited successfully.")
+                logging.info(f"Cluster policy '{policie_name}' edited successfully.")
             else:
                 self.cluster_policie_api.create_cluster_policy(police_config)
-                logging.info(f"Cluster police '{policie_name}' created successfully.")
+                logging.info(f"Cluster policy '{policie_name}' created successfully.")
         except HTTPError as e:
-            logging.error(f"HTTP error during police '{policie_name}' operation: {e}")
+            logging.error(f"HTTP error during policy '{policie_name}' operation: {e}")
         except RequestException as req_error:
-            logging.error(f"Request error in police '{policie_name}' operation: {req_error}")
+            logging.error(f"Request error in policy '{policie_name}' operation: {req_error}")
         except (IOError, OSError) as file_error:
-            logging.error(f"File IO error in police '{policie_name}' operation: {file_error}")
+            logging.error(f"File IO error in policy '{policie_name}' operation: {file_error}")
         except Exception as general_error:
-            logging.error(f"General error in police '{policie_name}' operation: {general_error}")
-            
-
+            logging.error(f"General error in policy '{policie_name}' operation: {general_error}")
