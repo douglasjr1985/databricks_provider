@@ -32,7 +32,6 @@ class DatabricksClusterPolicie:
         try:
             policies_response = self.cluster_policie_api.list_cluster_policies()
             policies_list = policies_response.get('policies', [])
-
             return (any(policy.get('name') == policie_name for policy in policies_list)).get('police_id')
         except Exception as e:
             logging.error(f"Error occurred while searching the police {policie_name} in list of active cluster policies: {e}")
