@@ -1,0 +1,44 @@
+{
+  "name": "dock_light_zone_c",
+  "definition": {
+    "spark_conf.spark.databricks.cluster.profile": {
+      "type": "forbidden",
+      "hidden": true
+    },
+    "spark_version": {
+      "type": "unlimited",
+      "defaultValue": "auto:latest"
+    },
+    "instance_pool_id": {
+      "type": "fixed",
+      "value": "1228-111244-coded114-pool-gfgsrvgw"
+    },
+    "driver_instance_pool_id": {
+      "type": "fixed",
+      "value": "1228-111249-nacre86-pool-7c2ivhg0"
+    },
+    "num_workers": {
+      "type": "forbidden",
+      "hidden": true
+    },
+    "autoscale.min_workers": {
+      "type": "unlimited",
+      "defaultValue": 1
+    },
+    "autoscale.max_workers": {
+      "type": "unlimited",
+      "defaultValue": 2
+    },
+    "aws_attributes.instance_profile_arn": {
+      "type": "allowlist",
+      "values": [
+        "arn:aws:iam::463684499885:instance-profile/DatabricksGlueHML"
+      ]
+    },
+    "spark_conf.spark.databricks.hive.metastore.glueCatalog.enabled": {
+      "type": "fixed",
+      "value": "true"
+    }
+  }
+}
+
